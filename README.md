@@ -1,2 +1,3 @@
 # CSE327_SEC4_WEATHER_WEBAPP
-weather application based on recommendations from the weather
+initial information:
+Weather web application for clothuing recommendatioin based on current weather and a rich marketplace for buying clothing
