@@ -28,11 +28,12 @@ window.addEventListener('load', ()=>{
 				locationTimezone.textContent = data.timezone;
 				temperatureDescription.textContent = summary;
 				
+				//Icon 
 				setIcons(icon, document.querySelector('.icon'));
 
 				let celsius=(temperature - 32)*(5/9);
 
-
+				//Converting F to C
 				temperatureSection.addEventListener('click', () =>{
 					if(temperatureSpan.textContent === "°F"){
 						temperatureSpan.textContent = "°C";
