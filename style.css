@@ -1,0 +1,642 @@
+/*--- Home Page --*/
+body {
+    overflow-x: hidden;
+    background-color:  #E9ECEF;
+
+}
+.background{
+    background: linear-gradient(to right, #6543cc, #729bdb);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 5s ease infinite;
+}
+            
+@keyframes BackgroundGradient {
+
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+    
+}
+
+
+#logo{
+    height: 2rem;
+    transition: .3s;
+    overflow: hidden;
+}
+
+#logo:hover{
+    transform: scale(1.3);
+    background: transparent;
+
+}
+
+
+.navbar{
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+
+
+
+/*--- For Other Platforms --*/
+
+.landing {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+.home-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.home-inner {
+    position: fixed;
+    display: table;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+
+
+
+.caption{
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 10%;
+    z-index: 1;
+}
+
+.caption img{
+    height:150px; 
+}   
+.caption h1{
+    color: white;
+    font-size: 3.4rem;
+    font-family: Century Gothic;
+    padding-bottom: 2rem;
+}
+.caption h2{
+    color: white;
+    font-size: 2rem;
+    font-family: Century Gothic;
+    padding-bottom: 2rem;
+} 
+
+
+
+
+/*buttons*/
+
+.button1{
+    left: 50%;
+    top: 130%;
+    width:23vw;
+    border-radius: 10px;
+    transform: translateX(-0%) translateY(-0%);
+    font-family: Century Gothic;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    font-size: 3.7vw;
+    background: linear-gradient(to right, #1be0a2, #12b08e);
+    background-size: 400% 400%;
+    animation: BackgroundGradient 5s ease infinite;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 5px 10px 20px black;
+
+}
+.button1:hover{
+    background:#056967;
+    transition: 1.8s;
+
+}
+.button1:focus{
+    outline: none;
+} 
+.button1:before{
+    content:'';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.5 );
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+.button1:after{
+    content:'';
+    display: block;
+    position: absolute;
+    background: rgba(255,255,255,.2 );
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) scaleX(-15deg);
+}
+
+.button1:hover:before{
+  transform: translateX(500px) skewX(-15deg);
+  opacity: .6;
+  transition: .7s ;
+}
+
+.button1:hover:after{
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: .7s ;
+}
+
+
+.button2{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    padding: 0px;
+    border: 1px solid #E9ECEF; 
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 5px auto;
+    display: inline-block;
+    transition: 1s;
+
+
+}
+
+.button2:hover{
+    transform: scale(1.3);
+    background: #ff800a;
+    z-index: 2;
+    box-shadow: 5px 10px 10px black;
+}
+
+
+
+
+
+
+
+
+
+
+h3.heading{
+    text-align: center;
+    font-size: 4rem;
+    font-family: Century Gothic;
+    text-transform: uppercase;
+    margin-bottom: 1.9rem;
+    width: 100%;
+    color: #f7f2f2;
+    text-shadow: 5px 2px 10px black;
+}
+h4.heading {
+    text-align: center;
+    font-size: 2rem;
+    font-family: Century Gothic;
+    text-transform: uppercase;
+    margin-bottom: 1.9rem;
+    width: 100%;
+    color: Black;
+
+}
+
+
+.contact{
+    padding-top: 50px;
+    background-color: transparent; 
+
+}
+
+.padding{
+    padding: 2rem 0;
+}
+img.portfolio{
+    width: 100%;
+}
+
+.footer .row{
+    background-color: #505962;
+    padding: 1rem 2rem 3rem;
+    color: white;
+}
+.footer img{
+    height: 5rem;
+}
+
+
+
+/*--- Home Page End--*/
+
+
+/*--- Search Page --*/
+
+
+
+
+.button3{
+    position: relative;
+    float: left;
+    margin-top: 40px;
+    margin-left: 5.25vw;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: .5s;
+    overflow: hidden;
+}
+.button3:hover{
+    transform: scale(1.3);
+    background: transparent;
+
+}
+.button3 img{
+    height: 5rem;
+}
+
+
+
+
+.button4{
+    position: relative;
+    float: right;
+    margin-top: 70px;
+    margin-right: 5.25vw;
+    color: white;
+    background-color: #805ced;
+    font-family: Century Gothic;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+.button4:hover{
+    background:#056967;
+    transform: scale(1.3);
+    transition: .5s;
+
+}
+.button5{
+    position: relative;
+    top: 11rem;
+    left: 6.8vw;
+    color: Black;
+    background-color: rgba(128, 92, 237, 0.2);
+    border: 2px solid #805ced;
+    font-family: Century Gothic;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.button5:hover{
+    background:#E9ECEF;
+    transform: scale(1.1);
+    transition: .5s;
+
+}
+
+
+
+
+
+
+
+
+
+.caption2{
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    top: 17%;
+    z-index: -1;
+}
+
+.caption2 h1{
+    position: relative;
+    top: 5rem;
+    left: 6.5vw;
+    font-size: 5.2vw;
+    font-family: Yu Gothic Light;
+    color: #6543cc;
+}
+
+.caption2 h2{
+    position: relative;
+    top: 8rem;
+    left: 6.5vw;
+    font-size: 3.14vw;
+    font-family: Century Gothic;
+    color: #652fb5;
+}
+.caption2 h2 l{
+    color:#608ed6;
+}
+.caption2 h2 l2{
+    color:#e8de17;
+}
+
+
+
+.searchbox{
+    position: relative;
+    top: 12rem;
+    height: 35px;
+    left: 7.8vw;
+    width: 86vw;
+    background: transparent;
+    border: 1.5px solid #652fb5;
+    max-width: 100%;
+}
+
+.Searchbutton1{
+    position: relative;
+    left: 7.8vw;
+    width:  86vw;
+    top: 13rem;
+    color: white;
+    font-size: 1.4rem;
+    background-color: #805ced;
+    font-family: Century Gothic;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+.Searchbutton1:hover{
+    background:#056967;
+    transition: 1s;
+
+}
+
+/*--- Search Page End --*/
+
+
+
+
+
+
+
+/*--- Forecast Page --*/
+.caption3{
+    position: relative;
+    height: 350px;
+    background-color: #3E80FE;
+}
+.caption3 h1{
+    position: relative;
+    top: 1rem;
+    left: 1vw;
+    font-size: 4rem;
+    font-family: Century Gothic;
+    color: White;
+
+}
+.caption3 h2{
+    position: absolute;
+    top: 12rem;
+    font-size: 4vw;
+    font-family: Century Gothic;
+    color: White;
+
+}
+
+
+.changecitybutton{
+    position: relative;
+    top: 1rem;
+    left: 8vw;
+    width: 10rem;
+    height: 2rem;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    font-family: Century Gothic;
+    color: #3E80FE; 
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.changecitybutton:hover{
+    background:#056967;
+    color: white;
+    transform: scale(1.1);
+    transition: .5s;
+}
+.changecitybutton i{
+    position: relative;
+    left: -13px;
+}
+.weather-icon{
+    position: relative;
+    top: 1rem;
+    left: 9vw;
+    height: 9rem;
+}
+
+.temperature{
+    position: relative;
+    display: flex;
+    width: 13rem;
+    left: 6.5vw;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.temperature:hover{
+    transform: scale(1.02);
+
+}
+
+.temperature h1{
+    top: 1vw;
+    font-size: 4rem;
+    font-family: Century Gothic;
+    color: White;
+
+}
+.temperature span{
+    position: relative;
+    left: 1vw;
+    font-size: 2rem;
+    font-family: Century Gothic;
+    color: White;
+
+}
+
+
+
+
+.caption3s h1{
+    position: absolute;
+    top: 24rem;
+    left: 6.5vw;
+    font-size: 5vw;
+    font-family: Century Gothic;
+    color: #16BD8E;
+}
+.closetbutton{
+    position: absolute;
+    top: 15vw;
+    left:0vw;
+    font-size: 3vw;
+    font-family: Century Gothic;
+    color: white;
+    background: #D31C1C;
+    box-shadow:5px 5px 5px #7a7a7a;
+    width: 14vw;
+    height: 4rem;
+    border: none; 
+    border-radius: 7px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s;
+}
+.closetbutton:hover{
+    transform: scale(1.02);
+    background:#056967;
+    box-shadow: 5px 10px 10px black;
+}
+
+
+
+
+
+
+
+
+.catagorybutton{
+    position: relative;
+    box-shadow:5px 5px 5px #7a7a7a;
+    top: 2vw;
+    left: 40%;
+    width: 26vw;
+    height: 150px;
+    border: none; 
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s;
+
+}
+
+.catagorybutton h1{
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    font-size: 2.5vw;
+    font-family: Century Gothic;
+    color: white;
+}
+.catagorybutton h2{
+    position: absolute;
+    top: 7rem;
+    left: 2.2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: Century Gothic;
+    color: white;
+}
+
+
+
+#catagoryb1{
+    margin-right:1vw;
+    margin-bottom:1vw;  
+    background: #3E80FE;
+}
+#catagoryb1 img{
+    position: absolute;
+    top: 4rem;
+    height: 3rem;
+    left: 2.5rem;
+}
+
+
+#catagoryb2{ 
+    background: #16BD8E;
+}
+#catagoryb2 img{
+    position: absolute;
+    top: 4rem;
+    height: 3rem;
+    left: 2.5rem;
+}
+
+
+#catagoryb3{
+    margin-right:1vw;  
+    background: #FFC300;
+}
+#catagoryb3 img{
+    position: absolute;
+    top: 4rem;
+    height: 3rem;
+    left: 2.5rem;
+}
+
+
+#catagoryb4{ 
+    background: #3E80FE;
+}
+#catagoryb4 img{
+    position: absolute;
+    top: 4rem;
+    height: 3rem;
+    left: 2.5rem;
+}
+
+
+.catagorybutton:hover{
+    transform: scale(1.02);
+    background: #ff800a;
+    z-index: 2;
+    box-shadow: 5px 10px 10px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--- Forecast Page End--*/
