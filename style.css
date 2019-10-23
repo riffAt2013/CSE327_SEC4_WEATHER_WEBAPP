@@ -89,12 +89,14 @@ body {
     font-size: 3.4rem;
     font-family: Century Gothic;
     padding-bottom: 2rem;
+    cursor: default;
 }
 .caption h2{
     color: white;
     font-size: 2rem;
     font-family: Century Gothic;
     padding-bottom: 2rem;
+    cursor: default;
 } 
 
 
@@ -201,8 +203,6 @@ body {
 
 
 
-
-
 h3.heading{
     text-align: center;
     font-size: 4rem;
@@ -212,6 +212,7 @@ h3.heading{
     width: 100%;
     color: #f7f2f2;
     text-shadow: 5px 2px 10px black;
+    cursor: default;
 }
 h4.heading {
     text-align: center;
@@ -221,6 +222,7 @@ h4.heading {
     margin-bottom: 1.9rem;
     width: 100%;
     color: Black;
+    cursor: default;
 
 }
 
@@ -242,6 +244,7 @@ img.portfolio{
     background-color: #505962;
     padding: 1rem 2rem 3rem;
     color: white;
+    cursor: default;
 }
 .footer img{
     height: 5rem;
@@ -344,6 +347,7 @@ img.portfolio{
     font-size: 5.2vw;
     font-family: Yu Gothic Light;
     color: #6543cc;
+    cursor: default;
 }
 
 .caption2 h2{
@@ -353,6 +357,7 @@ img.portfolio{
     font-size: 3.14vw;
     font-family: Century Gothic;
     color: #652fb5;
+    cursor: default;
 }
 .caption2 h2 l{
     color:#608ed6;
@@ -416,6 +421,7 @@ img.portfolio{
     font-size: 4rem;
     font-family: Century Gothic;
     color: White;
+    cursor: default;
 
 }
 .caption3 h2{
@@ -501,6 +507,7 @@ img.portfolio{
     font-size: 5vw;
     font-family: Century Gothic;
     color: #16BD8E;
+    cursor: default;
 }
 .closetbutton{
     position: absolute;
