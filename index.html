@@ -4,9 +4,21 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="photos/favicon.ico" />
 	<title>Weather Closet</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	<script type="text/javascript">
+		if (screen.width <= 699) {
+		document.location = "mobile/Mindex.html";
+		}
+	</script>
+	<script language=javascript>
+		if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+   		location.replace("mobile/Mindex.html");
+		}
+	</script>
 
 </head>
 
