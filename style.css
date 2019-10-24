@@ -1,10 +1,11 @@
 /*--- Home Page --*/
+
 body {
     overflow-x: hidden;
     background-color:  #E9ECEF;
 
 }
-.background{
+.background {
     background: linear-gradient(to right, #6543cc, #729bdb);
     background-size: 400% 400%;
     animation: BackgroundGradient 5s ease infinite;
@@ -87,14 +88,14 @@ body {
 .caption h1{
     color: white;
     font-size: 3.4rem;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     padding-bottom: 2rem;
     cursor: default;
 }
 .caption h2{
     color: white;
     font-size: 2rem;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     padding-bottom: 2rem;
     cursor: default;
 } 
@@ -110,7 +111,7 @@ body {
     width:23vw;
     border-radius: 10px;
     transform: translateX(-0%) translateY(-0%);
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: #fff;
     font-weight: 400;
     text-align: center;
@@ -206,7 +207,7 @@ body {
 h3.heading{
     text-align: center;
     font-size: 4rem;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     text-transform: uppercase;
     margin-bottom: 1.9rem;
     width: 100%;
@@ -217,7 +218,7 @@ h3.heading{
 h4.heading {
     text-align: center;
     font-size: 2rem;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     text-transform: uppercase;
     margin-bottom: 1.9rem;
     width: 100%;
@@ -253,6 +254,25 @@ img.portfolio{
 
 
 /*--- Home Page End--*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*--- Search Page --*/
@@ -291,7 +311,7 @@ img.portfolio{
     margin-right: 5.25vw;
     color: white;
     background-color: #805ced;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     border-radius: 5px;
     padding: 5px;
     border: none;
@@ -311,7 +331,7 @@ img.portfolio{
     color: Black;
     background-color: rgba(128, 92, 237, 0.2);
     border: 2px solid #805ced;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
@@ -355,7 +375,7 @@ img.portfolio{
     top: 8rem;
     left: 6.5vw;
     font-size: 3.14vw;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: #652fb5;
     cursor: default;
 }
@@ -387,7 +407,7 @@ img.portfolio{
     color: white;
     font-size: 1.4rem;
     background-color: #805ced;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     border-radius: 10px;
     padding: 5px;
     border: none;
@@ -408,7 +428,125 @@ img.portfolio{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*--- Forecast Page --*/
+
+
+
+
+/*--- Overlay --*/
+
+
+
+#overlaywrapper{
+    display: none;
+    position: fixed;
+    background-size: 400% 400%;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.95);
+    z-index: 2;
+}
+
+#overlay{
+    background-color: rgba(31, 133, 222, 0.5);
+    border-radius: 10px;
+    height: 40rem;
+    width: 80rem;
+    z-index: 5;
+    box-shadow: 30px 30px 40px black;
+}
+#overlay h1{
+    position: relative;
+    top: 1rem;
+    left: 3vw;
+    font-size: 4rem;
+    font-family: "Century Gothic";
+    color: White;
+    cursor: default;
+
+}
+#overlay h2{
+    position: relative;
+    top: 1rem;
+    left: 3vw;
+    font-size: 3rem;
+    font-family: "Century Gothic";
+    color: White;
+
+}
+#overlay h3{
+    top: 19rem;
+    font-size: 4rem;
+    font-family: "Century Gothic";
+    color: White;
+
+}
+
+.weather-icon{
+    top: 1rem;
+    left: 9vw;
+    height: 9rem;
+}
+
+.temperature2{
+    position: relative;
+    display: flex;
+    top: 1rem;
+    width: 8rem;
+    left: 11vw;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.temperature2:hover{
+    transform: scale(1.02);
+
+}
+
+.temperature2 h4{
+    top: 1vw;
+    font-size: 4rem;
+    font-family: "Century Gothic";
+    color: White;
+    cursor: pointer
+
+}
+.temperature2 span{
+    position: relative;
+    top: -1rem;
+    font-size: 2.5rem;
+    font-family: "Century Gothic";
+    color: White;
+
+}
+
+
+
+
+/*--- Overlay End --*/
+
+
+
+
 .caption3{
     position: relative;
     height: 350px;
@@ -419,7 +557,7 @@ img.portfolio{
     top: 1rem;
     left: 1vw;
     font-size: 4rem;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: White;
     cursor: default;
 
@@ -428,22 +566,22 @@ img.portfolio{
     position: absolute;
     top: 12rem;
     font-size: 4vw;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: White;
 
 }
 
 
 .changecitybutton{
-    position: relative;
-    top: 1rem;
-    left: 8vw;
+    position: absolute;
+    top: 5.8rem;
+    left: 9vw;
     width: 10rem;
     height: 2rem;
     background: white;
     border: none;
     border-radius: 5px;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: #3E80FE; 
     cursor: pointer;
     overflow: hidden;
@@ -467,10 +605,11 @@ img.portfolio{
 }
 
 .temperature{
-    position: relative;
+    position: absolute;
     display: flex;
-    width: 13rem;
-    left: 9vw;
+    top: 16rem;
+    width: 8rem;
+    left: 11vw;
     align-items: center;
     overflow: hidden;
     cursor: pointer;
@@ -484,18 +623,23 @@ img.portfolio{
 .temperature h1{
     top: 1vw;
     font-size: 4rem;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: White;
+    cursor: pointer
 
 }
 .temperature span{
     position: relative;
-    left: 1vw;
-    font-size: 2rem;
-    font-family: Century Gothic;
+    top: -1rem;
+    font-size: 2.5rem;
+    font-family: "Century Gothic";
     color: White;
 
 }
+
+
+
+
 
 
 
@@ -505,7 +649,7 @@ img.portfolio{
     top: 24rem;
     left: 6.5vw;
     font-size: 5vw;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: #16BD8E;
     cursor: default;
 }
@@ -514,7 +658,7 @@ img.portfolio{
     top: 15vw;
     left:0vw;
     font-size: 3vw;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: white;
     background: #D31C1C;
     box-shadow:5px 5px 5px #7a7a7a;
@@ -559,7 +703,7 @@ img.portfolio{
     top: 1vw;
     left: 1vw;
     font-size: 2.5vw;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: white;
 }
 .catagorybutton h2{
@@ -568,7 +712,7 @@ img.portfolio{
     left: 2.2rem;
     font-size: 1rem;
     font-weight: bold;
-    font-family: Century Gothic;
+    font-family: "Century Gothic";
     color: white;
 }
 
@@ -631,19 +775,202 @@ img.portfolio{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*--- Forecast Page End--*/
+
+
+
+
+
+
+
+
+
+/*--- Login Page--*/
+
+#loginform{
+    position: fixed;
+    background: linear-gradient(to bottom, #3E80FE, #12b08e);
+    background-size: 400% 400%;
+    height: 100%;
+    width: 100%;
+}
+
+.loginbox{
+    position: relative;
+    width: 320px;
+    height: 460px;
+    top: 47%;
+    left: 50%;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+    position: relative;
+    background: inherit;
+    overflow: hidden;
+    border-radius: 5px;
+    border-radius: 10px;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    z-index: 1;
+
+}
+
+.loginbox:before{
+    content: "";
+    position: absolute;
+    background: inherit;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);    
+    filter: blur(10px);
+    margin: -20px;
+    z-index: -1;
+
+}
+
+
+
+
+.loginbox h1{
+    margin-top: 7px;
+    padding: 0 0 15px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type="phonenumber"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 1s ease 0s;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #056967;
+    color: white;
+}
+
+.loginbox option[type="select"]{
+    background-color: black;
+    color: white;
+}
+.loginbox select{
+    background-color: black;
+    color: white;
+}
+
+
+.loginbox a{
+    text-decoration: none;
+    color: 
+    font-size: 12px;
+    line-height: 20px;
+    color: #4d0d73;
+}
+
+.loginbox a:hover
+{
+    color: #002cde;
+}
+.loginbox .avatar{
+    position: absolute;
+    top: .5rem;
+    left: 8rem; 
+    height: 4rem;
+}
+
+
+
+
+
+
+.button6{
+    position: absolute;
+    left: 10vw;
+    margin-top: 70px;
+    margin-right: 5.25vw;
+    width: 10rem;
+    color: white;
+    background-color: #056967;
+    font-family: "Century Gothic";
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+.button6:hover{
+    background:#805ced;
+    transform: scale(1.3);
+    transition: .5s;
+
+}
+
+.button7{
+    position: absolute;
+    left: 80vw;
+    width: 10rem;
+    margin-top: 70px;
+    margin-right: 5.25vw;
+    color: white;
+    background-color: #056967;
+    font-family: "Century Gothic";
+    font-size: 1.5rem;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+.button7:hover{
+    background:#805ced;
+    transform: scale(1.3);
+    transition: .5s;
+
+}
+
+
+
+
+
+/*--- Login Page End--*/
