@@ -77,12 +77,12 @@ body {
     width: 100%;
     max-width: 100%;
     position: absolute;
-    top: 10%;
+    top: 15%;
     z-index: 1;
 }
 
 .caption img{
-    height:150px; 
+    height:12rem; 
 }   
 .caption h1{
     color: white;
@@ -470,7 +470,7 @@ img.portfolio{
     position: relative;
     display: flex;
     width: 13rem;
-    left: 6.5vw;
+    left: 9vw;
     align-items: center;
     overflow: hidden;
     cursor: pointer;
