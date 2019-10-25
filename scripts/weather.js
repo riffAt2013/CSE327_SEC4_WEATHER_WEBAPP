@@ -7,6 +7,12 @@ window.addEventListener('load', ()=>{
 	let temperatureSection = document.querySelector('.temperature');
 	const temperatureSpan = document.querySelector('.temperature span');
 
+	let temperatureDescription2 = document.querySelector('.temperature-description2');
+	let temperatureDegree2 = document.querySelector('.temperature-degree2');
+	let locationTimezone2 = document.querySelector('.location-timezone2');
+	let temperatureSection2 = document.querySelector('.temperature2');
+	const temperatureSpan2 = document.querySelector('.temperature2 span');
+
 	if(navigator.geolocation){
 		navigator.geolocation.getCurrentPosition(position =>{
 			long = position.coords.longitude;
@@ -24,13 +30,19 @@ window.addEventListener('load', ()=>{
 				const {temperature, summary, icon} = data.currently;
 				
 				//Set DOM Elements from the API
-				temperatureDegree.textContent = temperature; 
+				temperatureDegree.textContent = Math.floor(temperature); 
 				locationTimezone.textContent = data.timezone;
-				temperatureDescription.textContent = summary;
+				temperatureDescription.textContent = summary+".";
+
+				temperatureDegree2.textContent = Math.floor(temperature); 
+				locationTimezone2.textContent = data.timezone;
+				temperatureDescription2.textContent = summary+".";
 				
 				//Icon 
 				setIcons(icon, document.querySelector('.icon'));
 
+				
+				
 				let celsius=(temperature - 32)*(5/9);
 
 				//Converting F to C
@@ -40,7 +52,16 @@ window.addEventListener('load', ()=>{
 						temperatureDegree.textContent= Math.floor(celsius);
 					}else{
 						temperatureSpan.textContent = "°F";
-						temperatureDegree.textContent = temperature;
+						temperatureDegree.textContent = Math.floor(temperature);
+					}
+				})
+				temperatureSection2.addEventListener('click', () =>{
+					if(temperatureSpan2.textContent === "°F"){
+						temperatureSpan2.textContent = "°C";
+						temperatureDegree2.textContent= Math.floor(celsius);
+					}else{
+						temperatureSpan2.textContent = "°F";
+						temperatureDegree2.textContent = Math.floor(temperature);
 					}
 				})
 			});
