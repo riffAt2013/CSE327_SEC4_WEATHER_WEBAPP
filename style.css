@@ -1,3 +1,5 @@
+
+
 /*--- Home Page --*/
 
 body {
@@ -88,14 +90,14 @@ body {
 .caption h1{
     color: white;
     font-size: 3.4rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     padding-bottom: 2rem;
     cursor: default;
 }
 .caption h2{
     color: white;
     font-size: 2rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     padding-bottom: 2rem;
     cursor: default;
 } 
@@ -111,7 +113,7 @@ body {
     width:23vw;
     border-radius: 10px;
     transform: translateX(-0%) translateY(-0%);
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: #fff;
     font-weight: 400;
     text-align: center;
@@ -207,7 +209,7 @@ body {
 h3.heading{
     text-align: center;
     font-size: 4rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     text-transform: uppercase;
     margin-bottom: 1.9rem;
     width: 100%;
@@ -218,7 +220,7 @@ h3.heading{
 h4.heading {
     text-align: center;
     font-size: 2rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     text-transform: uppercase;
     margin-bottom: 1.9rem;
     width: 100%;
@@ -311,7 +313,7 @@ img.portfolio{
     margin-right: 5.25vw;
     color: white;
     background-color: #805ced;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     border-radius: 5px;
     padding: 5px;
     border: none;
@@ -331,7 +333,7 @@ img.portfolio{
     color: Black;
     background-color: rgba(128, 92, 237, 0.2);
     border: 2px solid #805ced;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     border-radius: 5px;
     padding: 5px;
     cursor: pointer;
@@ -350,7 +352,12 @@ img.portfolio{
 
 
 
-
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 300;
+    src:url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+}
 
 .caption2{
     width: 100%;
@@ -365,8 +372,8 @@ img.portfolio{
     top: 5rem;
     left: 6.5vw;
     font-size: 5.2vw;
-    font-family: Yu Gothic Light;
-    color: #6543cc;
+    font-family: 'Open Sans';
+    color: #5783F3;
     cursor: default;
 }
 
@@ -375,15 +382,15 @@ img.portfolio{
     top: 8rem;
     left: 6.5vw;
     font-size: 3.14vw;
-    font-family: "Century Gothic";
+    font-family:'Futura';
     color: #652fb5;
     cursor: default;
 }
 .caption2 h2 l{
-    color:#608ed6;
+    color:#54C1FF;
 }
 .caption2 h2 l2{
-    color:#e8de17;
+    color:#FCD121;
 }
 
 
@@ -407,7 +414,7 @@ img.portfolio{
     color: white;
     font-size: 1.4rem;
     background-color: #805ced;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     border-radius: 10px;
     padding: 5px;
     border: none;
@@ -478,7 +485,7 @@ img.portfolio{
     top: 1rem;
     left: 3vw;
     font-size: 4rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: White;
     cursor: default;
 
@@ -488,19 +495,19 @@ img.portfolio{
     top: 1rem;
     left: 3vw;
     font-size: 3rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: White;
 
 }
 #overlay h3{
     top: 19rem;
     font-size: 4rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: White;
 
 }
 
-.weather-icon{
+.weather-icon2{
     top: 1rem;
     left: 9vw;
     height: 9rem;
@@ -525,7 +532,7 @@ img.portfolio{
 .temperature2 h4{
     top: 1vw;
     font-size: 4rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: White;
     cursor: pointer
 
@@ -534,7 +541,7 @@ img.portfolio{
     position: relative;
     top: -1rem;
     font-size: 2.5rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: White;
 
 }
@@ -543,6 +550,64 @@ img.portfolio{
 
 
 /*--- Overlay End --*/
+
+.noti{
+    position: absolute;
+    background-color: rgba(168, 8, 0, 0.7);
+    left: 8%;
+    top: 5%;
+    border-radius: 10px;
+    height: 40rem;
+    width: 80rem;
+    box-shadow: 30px 30px 40px black;
+    display: none;
+    z-index: 10;
+}
+.notification{
+    display: none;
+    color: Darkred;
+    padding: 5px;
+    font-size: 4rem;
+    width: 50rem;
+    left: 18%;
+    top: 15%;
+    background: lightblue;
+    border: 2px solid lightblue;
+    border-radius: 5px;
+    font-family: century-gothic, sans-serif;
+    padding-bottom: 2rem;
+    cursor: default;
+    position: relative;
+    z-index: 10;
+}
+.reload{
+    display: none;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    font-size: 3vw;
+    font-family: century-gothic, sans-serif;
+    color: darkred;
+    background: lightblue;
+    box-shadow:5px 5px 5px #7a7a7a;
+    width: 14vw;
+    height: 4rem;
+    border: none; 
+    border-radius: 7px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.3s;
+    z-index: 10;
+}
+.reload:hover{
+    transform: scale(1.02);
+    background:#056967;
+    box-shadow: 5px 10px 10px black;
+    z-index: 10;
+}
+
+
+
 
 
 
@@ -554,10 +619,10 @@ img.portfolio{
 }
 .caption3 h1{
     position: relative;
-    top: 1rem;
+    top: 0rem;
     left: 1vw;
     font-size: 4rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: White;
     cursor: default;
 
@@ -566,7 +631,7 @@ img.portfolio{
     position: absolute;
     top: 12rem;
     font-size: 4vw;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: White;
 
 }
@@ -574,14 +639,14 @@ img.portfolio{
 
 .changecitybutton{
     position: absolute;
-    top: 5.8rem;
+    top: 5rem;
     left: 9vw;
     width: 10rem;
     height: 2rem;
     background: white;
     border: none;
     border-radius: 5px;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: #3E80FE; 
     cursor: pointer;
     overflow: hidden;
@@ -599,7 +664,7 @@ img.portfolio{
 }
 .weather-icon{
     position: relative;
-    top: 1rem;
+    top: 2rem;
     left: 9vw;
     height: 9rem;
 }
@@ -623,7 +688,7 @@ img.portfolio{
 .temperature h1{
     top: 1vw;
     font-size: 4rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: White;
     cursor: pointer
 
@@ -632,7 +697,7 @@ img.portfolio{
     position: relative;
     top: -1rem;
     font-size: 2.5rem;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: White;
 
 }
@@ -649,7 +714,7 @@ img.portfolio{
     top: 24rem;
     left: 6.5vw;
     font-size: 5vw;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: #16BD8E;
     cursor: default;
 }
@@ -658,7 +723,7 @@ img.portfolio{
     top: 15vw;
     left:0vw;
     font-size: 3vw;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: white;
     background: #D31C1C;
     box-shadow:5px 5px 5px #7a7a7a;
@@ -703,7 +768,7 @@ img.portfolio{
     top: 1vw;
     left: 1vw;
     font-size: 2.5vw;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: white;
 }
 .catagorybutton h2{
@@ -712,7 +777,7 @@ img.portfolio{
     left: 2.2rem;
     font-size: 1rem;
     font-weight: bold;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     color: white;
 }
 
@@ -931,7 +996,7 @@ img.portfolio{
     width: 10rem;
     color: white;
     background-color: #056967;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     font-size: 1.5rem;
     border-radius: 5px;
     padding: 5px;
@@ -954,7 +1019,7 @@ img.portfolio{
     margin-right: 5.25vw;
     color: white;
     background-color: #056967;
-    font-family: "Century Gothic";
+    font-family: century-gothic, sans-serif;
     font-size: 1.5rem;
     border-radius: 5px;
     padding: 5px;
