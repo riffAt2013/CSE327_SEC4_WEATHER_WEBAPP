@@ -18,7 +18,7 @@ TBW
 ## Checklist
 
 - [ ] SRS
-- [ ] SDS
+- [ ] SDSrifa
 - [x] Use of GIT
 - [x] Utilization of Popular framework (done by flask)
 - [ ] Use of Artificial Intelligence
