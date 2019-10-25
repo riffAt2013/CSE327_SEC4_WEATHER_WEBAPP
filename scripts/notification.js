@@ -5,6 +5,7 @@
 const notificationElement = document.querySelector(".notification");
 const notificationReload = document.querySelector(".reload");
 const notificationBG = document.querySelector(".noti");
+const notificationWrap = document.querySelector(".overlaywrapper2");
 // CHECK IF BROWSER SUPPORTS GEOLOCATION
 if('geolocation' in navigator){
     navigator.geolocation.getCurrentPosition(setPosition, showError);
@@ -17,8 +18,6 @@ if('geolocation' in navigator){
 function setPosition(position){
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
-    
-    getWeather(latitude, longitude);
 }
 
 // SHOW ERROR WHEN THERE IS AN ISSUE WITH GEOLOCATION SERVICE
@@ -26,6 +25,7 @@ function showError(error){
     notificationElement.style.display = "block";
     notificationReload.style.display = "block";
     notificationBG.style.display = "block";
+    notificationWrap.style.display = "block";
     notificationElement.innerHTML = `<p> ${error.message} </p>`;
 }
 function reloadOn(){

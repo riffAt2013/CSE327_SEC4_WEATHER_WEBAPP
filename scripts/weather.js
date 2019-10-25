@@ -9,6 +9,7 @@ window.addEventListener('load', ()=>{
 
 	let temperatureDescription2 = document.querySelector('.temperature-description2');
 	let temperatureDegree2 = document.querySelector('.temperature-degree2');
+	let temperatureDegree2c = document.querySelector('.temperature-degree2c');
 	let locationTimezone2 = document.querySelector('.location-timezone2');
 	let temperatureSection2 = document.querySelector('.temperature2');
 	const temperatureSpan2 = document.querySelector('.temperature2 span');
@@ -29,12 +30,32 @@ window.addEventListener('load', ()=>{
 				console.log(data);
 				const {temperature, summary, icon} = data.currently;
 				
+				
+				//Converting Time
+				var date = new Date();
+				var monthN = date.getMonth();
+				var dayN = date.getDay();
+				var dateM = date.getDate();
+				var hour = date.getHours();
+				var minit = date.getMinutes();
+				var year = date.getFullYear();
+				var hours = twelvehrconvert(hour,minit);
+				var month = (getmonth(monthN));
+				var day = (getday(dayN));
+				document.getElementById("time").innerHTML= day+" "+month+" "+dateM+" "+hours;
+				document.getElementById("time2").innerHTML= hours+"<br>"+day+"<br>"+month+" "+dateM+"<br>"+year;
+				
+
+				let celsius=(temperature - 32)*(5/9);
+								
+
 				//Set DOM Elements from the API
-				temperatureDegree.textContent = Math.floor(temperature); 
+				temperatureDegree.textContent = Math.floor(celsius); 
 				locationTimezone.textContent = data.timezone;
 				temperatureDescription.textContent = summary+".";
 
 				temperatureDegree2.textContent = Math.floor(temperature); 
+				temperatureDegree2c.textContent = Math.floor(celsius);
 				locationTimezone2.textContent = data.timezone;
 				temperatureDescription2.textContent = summary+".";
 				
@@ -42,26 +63,15 @@ window.addEventListener('load', ()=>{
 				setIcons(icon, document.querySelector('.icon'));
 
 				
-				
-				let celsius=(temperature - 32)*(5/9);
 
 				//Converting F to C
 				temperatureSection.addEventListener('click', () =>{
-					if(temperatureSpan.textContent === "°F"){
-						temperatureSpan.textContent = "°C";
-						temperatureDegree.textContent= Math.floor(celsius);
-					}else{
+					if(temperatureSpan.textContent === "°C"){
 						temperatureSpan.textContent = "°F";
-						temperatureDegree.textContent = Math.floor(temperature);
-					}
-				})
-				temperatureSection2.addEventListener('click', () =>{
-					if(temperatureSpan2.textContent === "°F"){
-						temperatureSpan2.textContent = "°C";
-						temperatureDegree2.textContent= Math.floor(celsius);
+						temperatureDegree.textContent= Math.floor(temperature);
 					}else{
-						temperatureSpan2.textContent = "°F";
-						temperatureDegree2.textContent = Math.floor(temperature);
+						temperatureSpan.textContent = "°C";
+						temperatureDegree.textContent = Math.floor(celsius);
 					}
 				})
 			});
@@ -74,5 +84,22 @@ window.addEventListener('load', ()=>{
 		const currentIcon  = icon.replace(/-/g, "_").toUpperCase();
 		skycons.play();
 		return skycons.set(iconID, Skycons[currentIcon]);
+	}
+	function getmonth(monthN){
+		var monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+		return monthNames[monthN];
+	}
+	function getday(dayN){
+		var daynames = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday"];
+		return daynames[dayN];
+	}
+	function twelvehrconvert(hour, minit){
+		if(hour>12){
+			hour = hour - 12;
+			return hour+":"+minit+" am";
+		}
+		else{
+			return hour+":"+minit+" pm";;
+		}
 	}
 });

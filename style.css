@@ -499,6 +499,15 @@ img.portfolio{
     color: White;
 
 }
+#overlay h5{
+    position: relative;
+    left: 5px;
+    top: 10rem;
+    font-size: 2.5rem;
+    font-family: impact;
+    color: White;
+
+}
 #overlay h3{
     top: 19rem;
     font-size: 4rem;
@@ -517,11 +526,10 @@ img.portfolio{
     position: relative;
     display: flex;
     top: 1rem;
-    width: 8rem;
-    left: 11vw;
+    width: 20rem;
+    left: 7vw;
     align-items: center;
     overflow: hidden;
-    cursor: pointer;
     transition: 0.3s;
 }
 .temperature2:hover{
@@ -550,27 +558,39 @@ img.portfolio{
 
 
 /*--- Overlay End --*/
-
+.overlaywrapper2{
+    display: none;
+    position: fixed;
+    background-size: 400% 400%;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background:rgba(0, 0, 0, 0.95);
+    z-index: 10;
+}
 .noti{
-    position: absolute;
     background-color: rgba(168, 8, 0, 0.7);
-    left: 8%;
-    top: 5%;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px;
-    height: 40rem;
-    width: 80rem;
+    height: 40vh;
+    width: 60vw;
     box-shadow: 30px 30px 40px black;
     display: none;
     z-index: 10;
 }
 .notification{
+    position: relative;
     display: none;
     color: Darkred;
     padding: 5px;
-    font-size: 4rem;
-    width: 50rem;
-    left: 18%;
-    top: 15%;
+    font-size: 3vw;
+    height: 20vh;
+    width: 40vw;
+    margin: 0 auto;
+    top: 10%;
     background: lightblue;
     border: 2px solid lightblue;
     border-radius: 5px;
@@ -581,10 +601,10 @@ img.portfolio{
     z-index: 10;
 }
 .reload{
+    position: relative;
     display: none;
-    position: absolute;
-    left: 40%;
-    top: 40%;
+    margin: 0 auto;
+    top: 20%;
     font-size: 3vw;
     font-family: century-gothic, sans-serif;
     color: darkred;
@@ -620,18 +640,26 @@ img.portfolio{
 .caption3 h1{
     position: relative;
     top: 0rem;
-    left: 1vw;
-    font-size: 4rem;
+    left: 2vw;
+    font-size: 4vw;
     font-family: century-gothic, sans-serif;
     color: White;
     cursor: default;
 
 }
 .caption3 h2{
-    position: absolute;
-    top: 12rem;
+    position: relative;
+    top: 8rem;
     font-size: 4vw;
     font-family: century-gothic, sans-serif;
+    color: White;
+
+}
+.caption3 h3{
+    position: relative;
+    top: 2vh;
+    font-size: 3vw;
+    font-family: impact;
     color: White;
 
 }
@@ -641,7 +669,7 @@ img.portfolio{
     position: absolute;
     top: 5rem;
     left: 9vw;
-    width: 10rem;
+    width: 10vw;
     height: 2rem;
     background: white;
     border: none;
@@ -664,7 +692,6 @@ img.portfolio{
 }
 .weather-icon{
     position: relative;
-    top: 2rem;
     left: 9vw;
     height: 9rem;
 }
@@ -672,7 +699,7 @@ img.portfolio{
 .temperature{
     position: absolute;
     display: flex;
-    top: 16rem;
+    top: 17rem;
     width: 8rem;
     left: 11vw;
     align-items: center;

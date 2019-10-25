@@ -12,20 +12,26 @@
 
 </head>
 <body>
-	<div class="noti">
-	 	<div class="notification">Notification</div>
-	 	<button class="reload" onclick="reloadOn()">Reload</button>
-	 </div>
+	<div class="overlaywrapper2 container-fluid">
+		<div class="noti">
+	 		<div class="notification">Notification</div>
+	 		<button class="reload" onclick="reloadOn()">Reload</button>
+	 	</div>
+	</div>
+
 	<div onclick="turnOverLayOff()" id="overlaywrapper">
 	<div id="overlay" onclick="turnOverLayOff()">
 		<div class="row">
 			<div class="col-6">
-				<h1 class="location-timezone2">Place</h1>
+				<h1 class="location-timezone2"></h1>
 				<div class="temperature2">
-					<h4 class="temperature-degree2">27</h4>
-				<span>°F</span>
+					<h4 class="temperature-degree2">0</h4>
+				<span>°F</span><h4>/</h4>
+					<h4 class="temperature-degree2c">0</h4>
+				<span>°C</span>
 				</div>
 				<h2 class="temperature-description2">Weather Description</h2>
+				<h5 id="time2" class="time">Date</h5>
 
 			</div>
 
@@ -48,6 +54,7 @@
 				<h1 class="location-timezone">Place</h1>
 			</div>
 			<div class="col-6">
+				<h3 id="time" class="time">Date</h3>
 				<h2 class="temperature-description">Weather Description</h2>
 			</div>
 		</div>
@@ -63,7 +70,7 @@
 
 	<div class="temperature">
 			<h1 class="temperature-degree">27</h1>
-			<span>°F</span>
+			<span>°C</span>
 	</div>
 
 
