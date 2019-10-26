@@ -454,6 +454,27 @@ img.portfolio{
 /*--- Forecast Page --*/
 
 
+.button8{
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    margin-right: 2vw;
+    color: white;
+    background-color: #805ced;
+    font-family: century-gothic, sans-serif;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 10;
+}
+.button8:hover{
+    background:#056967;
+    transform: scale(1.15);
+    transition: .5s;
+
+}
 
 
 /*--- Overlay --*/
@@ -493,7 +514,7 @@ img.portfolio{
 #overlay h2{
     position: relative;
     top: 1rem;
-    left: 3vw;
+    left: 1vw;
     font-size: 3rem;
     font-family: century-gothic, sans-serif;
     color: White;
@@ -501,7 +522,7 @@ img.portfolio{
 }
 #overlay h5{
     position: relative;
-    left: 5px;
+    left: 15px;
     top: 10rem;
     font-size: 2.5rem;
     font-family: impact;
@@ -517,8 +538,9 @@ img.portfolio{
 }
 
 .weather-icon2{
+    position: relative;
     top: 1rem;
-    left: 9vw;
+    left: 15vw;
     height: 9rem;
 }
 
@@ -691,8 +713,9 @@ img.portfolio{
     left: -13px;
 }
 .weather-icon{
-    position: relative;
-    left: 9vw;
+    position: absolute;
+    top: 8rem;
+    left: 10vw;
     height: 9rem;
 }
 
@@ -701,7 +724,7 @@ img.portfolio{
     display: flex;
     top: 17rem;
     width: 8rem;
-    left: 11vw;
+    left: 10vw;
     align-items: center;
     overflow: hidden;
     cursor: pointer;
