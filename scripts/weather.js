@@ -20,7 +20,7 @@ window.addEventListener('load', ()=>{
 			lat= position.coords.latitude;
 
 			const proxy = "https://cors-anywhere.herokuapp.com/";
-			const api = `${proxy}https://api.darksky.net/forecast/bb6a00ed5b7005e1c10d05d9da831179/${lat},${long}`;
+			const api = `${proxy}https://api.darksky.net/forecast/bb6a00ed5b7005e1c10d05d9da831179/${lat},${long}?exclude=flags,alerts,daily,minutely`;
 		
 			fetch(api)
 				.then(response => {
@@ -37,13 +37,13 @@ window.addEventListener('load', ()=>{
 				var dayN = date.getDay();
 				var dateM = date.getDate();
 				var hour = date.getHours();
-				var minit = date.getMinutes();
+				var minutes = date.getMinutes();
 				var year = date.getFullYear();
-				var hours = twelvehrconvert(hour,minit);
+				var hours = formatAMPM(hour,minutes);
 				var month = (getmonth(monthN));
 				var day = (getday(dayN));
 				document.getElementById("time").innerHTML= day+" "+month+" "+dateM+" "+hours;
-				document.getElementById("time2").innerHTML= hours+"<br>"+day+"<br>"+month+" "+dateM+"<br>"+year;
+				document.getElementById("time2").innerHTML= hours+"<br>"+day+"<br>"+month+" "+dateM+" "+year;
 				
 
 				let celsius=(temperature - 32)*(5/9);
@@ -93,13 +93,12 @@ window.addEventListener('load', ()=>{
 		var daynames = ["Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday"];
 		return daynames[dayN];
 	}
-	function twelvehrconvert(hour, minit){
-		if(hour>12){
-			hour = hour - 12;
-			return hour+":"+minit+" am";
-		}
-		else{
-			return hour+":"+minit+" pm";;
-		}
-	}
+	function formatAMPM(hours, minutes) {
+		var ampm = hours >= 12 ? 'pm' : 'am';
+		hours = hours % 12;
+		hours = hours ? hours : 12; // the hour '0' should be '12'
+		minutes = minutes < 10 ? '0'+minutes : minutes;
+		var strTime = hours + ':' + minutes + ' ' + ampm;
+		return strTime;
+	  }
 });
