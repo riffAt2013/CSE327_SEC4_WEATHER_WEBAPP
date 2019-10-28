@@ -1253,4 +1253,207 @@
 }
 
 
-@media screen and (max-width: 375px){}
+@media screen and (max-width: 375px){
+
+    /*--- Home Page --*/
+ 
+    .button5{
+        left: 4vw;
+    }
+
+    .caption2{
+        top: 13%;
+    }
+    .caption2 h1{
+        font-size: 2.5rem;
+    }
+
+    .caption2 h2{
+        font-size: 1.5rem;
+    }
+
+
+    /*--- Search Page End --*/
+
+    /*--- Forecast Page --*/
+
+
+
+    #overlay{
+        width: 350px;
+        height: 500px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    #overlay h1{
+        position: absolute;
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: default;
+
+    }
+    #overlay h3{
+        position: relative;
+        text-align: center;
+        top: 6.5rem;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    #overlay h5{
+        position: absolute;
+        text-align: center;
+        top: 28rem;
+        font-size: 1.5rem;
+        font-family: impact;
+        color: White;
+
+    }
+    .weather-icon2{
+        position: absolute;
+        text-align: center;
+        top: 14rem;
+        height: 9rem;
+    }
+
+
+    .temperature2{
+        position: absolute;
+        display: flex;
+        top: 4rem;
+
+
+    }
+    .temperature2 h4{
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    .temperature2 span{
+        position: relative;
+        top: -.5rem;
+        font-size: 1.5rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+
+    /*--- Overlay End --*/
+
+
+
+
+
+
+
+
+
+    .caption3{
+        height: 300px;
+    }
+    .caption3 h1{
+        font-size: 10vw;
+    }
+    .caption3 h2{
+        top: 26vh;
+        left: 15vw;
+    }
+    .caption3 h3{
+        left: 6rem;
+        font-size: 1.2rem;
+
+    }
+
+    .changecitybutton{
+        top: 3rem;
+    }
+
+
+    .weather-icon{
+        top: 5rem;
+    }
+
+    .temperature{
+        top: 14rem;
+        left: 3rem;
+    }
+
+
+    .temperature span{
+        font-size: 2rem;
+    }
+
+
+    .closetbutton{
+        font-size: 1rem;
+        width: 5rem;
+    }
+
+
+
+
+
+
+
+    .catagorybutton{
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .catagorybutton h1{
+        font-size: 0.8rem;
+    }
+    .catagorybutton h2{
+        top: 4.5rem;
+        font-size: 1rem;
+    }
+
+
+    #catagoryb1 img{
+        height: 2rem;
+    }
+
+    #catagoryb2 img{
+        height: 2rem;
+    }
+
+
+    #catagoryb3 img{
+        height: 2rem;
+    }
+
+    #catagoryb4 img{
+        height: 2rem;
+    }
+
+
+
+
+    /*--- Forecast Page End--*/
+
+
+
+
+
+
+
+
+
+    /*--- Login Page--*/
+
+
+    .button6{
+        width: 8rem;
+    }
+    .button7{
+        width: 8rem;
+        left: 6rem;
+    }
+    /*--- Login Page End--*/
+}
