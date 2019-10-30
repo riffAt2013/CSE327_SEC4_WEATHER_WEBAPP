@@ -28,9 +28,9 @@ window.addEventListener('load', ()=>{
 			})
 			.then (data => {
 				console.log(data);
-				const {icon} = data.currently;
-                
-                partlycloudyday(icon);
+				const {temperature , icon} = data.currently;
+                let celsius=(temperature - 32)*(5/9);
+                WeatherSuggestions(celsius,icon);
 
 
 
@@ -41,41 +41,31 @@ window.addEventListener('load', ()=>{
             
 		});
     }
-    function clearday(icon){
-        var res;
-        if(icon.match(/clear-day/gi)){
-            res = 1;
-        }
-        if(res == 1){
-            weather.style.display = 'block';
-        }
-    }
-    function clearnight(icon){
-        var res;
-        if(icon.match(/clear-night/gi)){
-            res = 1;
-        }
-        if(res == 1){
-            weather.style.display = 'block';
-        }
-    }
-    function partlycloudyday(icon){
-        var res;
+    function WeatherSuggestions(temp,icon){
         if(icon.match(/partly-cloudy-day/gi)){
-            res = 1;
+            if(temp>26 && temp<30 ){
+                giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+            }else{
+                giveSuggestions("MITTENS","COATS","JEANS","BOOTS");
+            }
         }
-        if(res == 1){
-            dressName1.textContent = "MITTENS";
-            dressImg1.src ="photos/clothes/mitten.png";
-            dressName2.textContent = "COAT";
-            dressImg2.src ="photos/clothes/top.png";
-            dressName3.textContent = "JEANS";
-            dressImg3.src ="photos/clothes/bottom.png";
-            dressName4.textContent = " BOOTS";
-            dressImg4.src ="photos/clothes/boot.png";
+        if(icon.match(/partly-cloudy-night/gi)){
+            if(temp>26 && temp<30 ){
+                giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+            }else{
+                giveSuggestions("MITTENS","COATS","JEANS","BOOTS");
+            }
         }
     }
 
-
-
+    function giveSuggestions(acc,top,bottom,foot){
+            dressName1.textContent = acc;
+            dressImg1.src ="photos/clothes/"+acc+".png";
+            dressName2.textContent = top;
+            dressImg2.src ="photos/clothes/"+top+".png";
+            dressName3.textContent = bottom;
+            dressImg3.src ="photos/clothes/"+bottom+".png";
+            dressName4.textContent = foot;
+            dressImg4.src ="photos/clothes/"+foot+".png";
+    }
 });

@@ -279,8 +279,12 @@ img.portfolio{
 
 /*--- Search Page --*/
 
-
-
+.citysrc{
+    display: block;
+}
+.forcastoverlay{
+    display: none;
+}
 
 .button3{
     position: relative;
@@ -403,8 +407,21 @@ img.portfolio{
     width: 86vw;
     background: transparent;
     border: 1.5px solid #652fb5;
+    border-radius: 5px;
     max-width: 100%;
 }
+
+#country{
+    position: relative;
+    top: 11.09rem;
+    left: 15vw;
+    height: 35px;
+    background: transparent;
+    border: 1.5px solid #652fb5;
+    border-radius: 5px;
+
+}
+
 
 .Searchbutton1{
     position: relative;
@@ -505,7 +522,7 @@ img.portfolio{
     position: relative;
     top: 1rem;
     left: 3vw;
-    font-size: 4rem;
+    font-size: 3rem;
     font-family: century-gothic, sans-serif;
     color: White;
     cursor: default;
