@@ -13,29 +13,111 @@
 </head>
 <body>
 
-	<div>
-		<a class="returnlogo" href="Mindex.html"><button class="button3"><img src="photos/logo.png"></button></a>
-		<a href="Mindex.html"><button class="button4"><i class="fas fa-arrow-left"></i> Main Menu</button></a>
-	</div>
-	<div class="caption2">
+	<div class="citysrc">
+		<div>
+			<a class="returnlogo" href="Mindex.html"><button class="button3"><img src="photos/logo.png"></button></a>
+			<button class="button4"><i class="fas fa-arrow-left"></i> Main Menu</button>
+		</div>
+		<div class="caption2">
+			
+			<h1>Where are you headed today?</h1>
+			<h2 class="caption center-block">Dress for the weather.<br id="pad">Be prepared for <l>rain</l> or <l2>sunshine</l2>.</h2>
+			<div class="currentlocationbutton">
+	    		<a href="Mforecastpage.html"><button class="button5"><i class="fas fa-location-arrow"></i> Current Location</button></a>   
+	    			    		<select id="country" placeholder="Country">
+		    		<option value="bd">Bangladesh</option>
+		    	</select> 	
+	    	</div>
+
 		
-		<h1>Where are you headed today?</h1>
-		<h2 class="caption center-block">Dress for the weather.<br id="pad">Be prepared for <l>rain</l> or <l2>sunshine</l2>.</h2>
-		<div class="currentlocationbutton">
-    		<a href="Mforecastpage.html"><button class="button5"><i class="fas fa-location-arrow"></i> Current Location</button></a>    	
-    	</div>
-	
 
-	<div class="row mb-5">
-    	<input class="searchbox" id="exampleFormControlInput5" type="email" placeholder=" City" class="form-control form-control-underlined">
-    	<a href=""><button type="submit" class="Searchbutton1">Search</button></a>
-    </div>
-    </div>
+			<div class="row mb-5">
+		    	<input id="searchInput" class="searchbox" id="exampleFormControlInput5" type="email" placeholder=" City" class="form-control form-control-underlined">
 
+		   		<button id="searchButton" type="submit" class="Searchbutton1">Search</button>
+		    </div>
+	    </div>
+	</div>
+
+
+	<div class="forcastoverlay">
+		<a href="Mindex.html"><button class="button8"><i class="fas fa-arrow-left"></i> Main Menu</button></a>
+		<div class="overlaywrapper2 container-fluid">
+			<div class="noti">
+		 		<div class="notification">Notification</div>
+		 		<button class="reload" onclick="reloadOn()">Reload</button>
+		 	</div>
+		</div>
+
+		<div onclick="turnOverLayOff()" id="overlaywrapper">
+		<div id="overlay" onclick="turnOverLayOff()">
+			<div class="row">
+				<div class="col-6">
+					<h1 class="location-timezone2">place</h1>
+					<div class="temperature2">
+						<h4 class="temperature-degree2">0</h4>
+					<span>°F</span><h4>/</h4>
+						<h4 class="temperature-degree2c">0</h4>
+					<span>°C</span>
+					</div>
+					<h5 id="time2" class="time">Date</h5>
+				</div>
+
+				<div class="col-6">
+					
+					<h3 class="temperature-hourly-description">Weather Description Hourly</h3>
+					<div class="weather-icon2">
+						<canvas class="icon2" width="128" height="128"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+
+
+		<div onclick="turnOverLayOn()" class="caption3 container-fluid">
+			<div class="weather-icon">
+				<canvas class="icon" width="128" height="128"></canvas>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<h1 class="location-timezone">Place</h1>
+				</div>
+				<div class="col-6">
+					<h3 id="time" class="time">Date</h3>
+					<h2 class="temperature-description">Weather Description</h2>
+				</div>
+			</div>
+		</div>
+		
+		<a href="Mcitysearch.html"><button class="changecitybutton"><i class="fas fa-arrow-left"></i>Change City</button></a>
+
+		<div id class="temperature">
+				<h1 class="temperature-degree">27</h1>
+				<span>°C</span>
+		</div>
+
+
+		<div class="caption3s container-fluid">
+		<h1>My<br>Outfit<button id="closetbutton" class="closetbutton">Closet</button></h1>
+		
+		</div>
+
+		<div class="container-fluid">
+			<button class="catagorybutton" id="catagoryb1"><h1>ACCESSORIES</h1><h2 class="b1"></h2><img class="b1img" src=""></button>
+			<button class="catagorybutton" id="catagoryb2"><h1>TOP</h1><h2 class="b2">T-</h2><img class="b2img" src=""></button><br>
+			<button class="catagorybutton" id="catagoryb3"><h1>BOTTOM</h1><h2 class="b3"></h2><img class="b3img" src=""></button>
+			<button class="catagorybutton" id="catagoryb4"><h1>FOOTWEAR</h1><h2 class="b4"></h2><img class="b4img" src=""></button>	
+		</div>
+	</div>
 
 
     <!-- End -->
 	<!--- scripts -->
+	<script src="scripts/citysearch.js"></script>
+	<script src="scripts/skycons.js"></script>
+	<script src="scripts/popup.js"></script>
 	<script src="scripts/kit.js"></script>
 </body>
 </html>
