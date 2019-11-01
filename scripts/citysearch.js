@@ -28,6 +28,7 @@ function searchWeather(searchTerm,countryTerm){
             searchTerm = searchTerm+", "+countryTerm;
         }
         searchWeatherStat(lon,lat,searchTerm);
+        hourlyWeather(lon,lat,searchTerm);
     })
 }
 
@@ -146,20 +147,167 @@ function searchWeatherStat(long,lat,name){
         } 
 
         function WeatherSuggestions(temp,icon){
-            if(icon.match(/partly-cloudy-day/gi)){
-                if(temp>26 && temp<30 ){
+            if(icon.match(/clear-day/gi)){
+                if(temp <= 10){
+
+                }
+                if(temp > 10 && temp <= 15 ){
                     giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
-                }else{
-                    giveSuggestions("MITTENS","COATS","JEANS","BOOTS");
+                }
+                if(temp > 15 && temp <= 20 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 20 && temp <= 25 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 25 && temp <= 30 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 30){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+            }
+            if(icon.match(/clear-night/gi)){
+                if(temp <= 10){
+
+                }
+                if(temp > 10 && temp <= 15 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 15 && temp <= 20 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 20 && temp <= 25 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 25 && temp <= 30 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 30){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+            }
+            if(icon.match(/rain/gi)){
+                if(temp <= 10){
+
+                }
+                if(temp > 10 && temp <= 15 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 15 && temp <= 20 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 20 && temp <= 25 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 25 && temp <= 30 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 30){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+            }
+            if(icon.match(/wind/gi)){
+                if(temp <= 10){
+
+                }
+                if(temp > 10 && temp <= 15 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 15 && temp <= 20 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 20 && temp <= 25 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 25 && temp <= 30 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 30){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+            }
+            if(icon.match(/fog/gi)){
+                if(temp <= 10){
+
+                }
+                if(temp > 10 && temp <= 15 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 15 && temp <= 20 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 20 && temp <= 25 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 25 && temp <= 30 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 30){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+            }
+            if(icon.match(/cloudy/gi)){
+                if(temp <= 10){
+
+                }
+                if(temp > 10 && temp <= 15 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 15 && temp <= 20 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 20 && temp <= 25 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 25 && temp <= 30 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 30){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+            }
+            if(icon.match(/partly-cloudy-day/gi)){
+                if(temp <= 10){
+
+                }
+                if(temp > 10 && temp <= 15 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 15 && temp <= 20 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 20 && temp <= 25 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 25 && temp <= 30 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 30){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
             if(icon.match(/partly-cloudy-night/gi)){
-                if(temp>26 && temp<30 ){
+                if(temp <= 10){
+
+                }
+                if(temp > 10 && temp <= 15 ){
                     giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
-                }else{
-                    giveSuggestions("MITTENS","COATS","JEANS","BOOTS");
+                }
+                if(temp > 15 && temp <= 20 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 20 && temp <= 25 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 25 && temp <= 30 ){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                }
+                if(temp > 30){
+                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
+
         }
     
         function giveSuggestions(acc,top,bottom,foot){
@@ -174,3 +322,35 @@ function searchWeatherStat(long,lat,name){
         }
 
 }
+function hourlyWeather(long,lat,name){
+	let temperatureDescriptionHourly = document.querySelector('.temperature-hourly-description');
+
+
+			const proxy = "https://cors-anywhere.herokuapp.com/";
+			const api = `${proxy}https://api.darksky.net/forecast/bb6a00ed5b7005e1c10d05d9da831179/${lat},${long}?exclude=flags,alerts,daily,minutely`;
+			
+
+			fetch(api)
+				.then(response => {
+					return response.json();
+			})
+			.then (data => {
+				console.log(data);
+				const {summary, icon} = data.hourly;
+				
+				//Set DOM Elements from the API
+				temperatureDescriptionHourly.textContent = summary;	
+				//Icon 
+				setIcon(icon, document.querySelector('.icon2'));
+
+			});
+		
+
+
+	function setIcon(icon, iconID){
+		const skycons = new Skycons({color: "white"});
+		const currentIcon  = icon.replace(/-/g, "_").toUpperCase();
+		skycons.play();
+		return skycons.set(iconID, Skycons[currentIcon]);
+	}
+};
