@@ -1,3 +1,2243 @@
+
+@media screen and (min-width: 1000px){
+
+
+    /*--- Home Page --*/
+
+    body {
+        overflow-x: hidden;
+        background-color:  #E9ECEF;
+
+    }
+    .background {
+        background: linear-gradient(to right, #6543cc, #729bdb);
+        background-size: 400% 400%;
+        animation: BackgroundGradient 5s ease infinite;
+    }
+                
+    @keyframes BackgroundGradient {
+
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+        
+    }
+
+
+    #logo{
+        height: 2rem;
+        transition: .3s;
+        overflow: hidden;
+    }
+
+    #logo:hover{
+        transform: scale(1.3);
+        background: transparent;
+
+    }
+
+
+    .navbar{
+        text-transform: uppercase;
+        font-family: sans-serif;
+    }
+
+
+
+
+    /*--- For Other Platforms --*/
+
+    .landing {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+    }
+    .home-wrap {
+        clip: rect(0, auto, auto, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .home-inner {
+        position: fixed;
+        display: table;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+    }
+
+
+
+
+    .caption{
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: 15%;
+        z-index: 1;
+    }
+
+    .caption img{
+        height:12rem; 
+    }   
+    .caption h1{
+        color: white;
+        font-size: 3.4rem;
+        font-family: century-gothic, sans-serif;
+        padding-bottom: 2rem;
+        cursor: default;
+    }
+    .caption h2{
+        color: white;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        padding-bottom: 2rem;
+        cursor: default;
+    } 
+
+
+
+
+    /*buttons*/
+
+    .button1{
+        left: 50%;
+        top: 130%;
+        width:23vw;
+        border-radius: 10px;
+        transform: translateX(-0%) translateY(-0%);
+        font-family: century-gothic, sans-serif;
+        color: #fff;
+        font-weight: 400;
+        text-align: center;
+        font-size: 3.7vw;
+        background: linear-gradient(to right, #1be0a2, #12b08e);
+        background-size: 400% 400%;
+        animation: BackgroundGradient 5s ease infinite;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: 5px 10px 20px #3A514E;
+
+    }
+    .button1:hover{
+        background:#056967;
+        transition: 1.8s;
+
+    }
+    .button1:focus{
+        outline: none;
+    } 
+    .button1:before{
+        content:'';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,.5 );
+        width: 60px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: .5s;
+        filter: blur(30px);
+        transform: translateX(-130px) skewX(-15deg);
+    }
+    .button1:after{
+        content:'';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,.2 );
+        width: 30px;
+        height: 100%;
+        left: 30px;
+        top: 0;
+        opacity: 0;
+        filter: blur(30px);
+        transform: translateX(-100px) scaleX(-15deg);
+    }
+
+    .button1:hover:before{
+      transform: translateX(500px) skewX(-15deg);
+      opacity: .6;
+      transition: .7s ;
+    }
+
+    .button1:hover:after{
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 1;
+      transition: .7s ;
+    }
+
+
+    .button2{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        padding: 0px;
+        border: 1px solid #E9ECEF; 
+        border-radius: 50%;
+        cursor: pointer;
+        overflow: hidden;
+        margin: 5px auto;
+        display: inline-block;
+        transition: 1s;
+
+
+    }
+
+    .button2:hover{
+        transform: scale(1.3);
+        background: #ff800a;
+        z-index: 2;
+        box-shadow: 5px 10px 10px black;
+    }
+
+
+
+
+
+
+
+
+    h3.heading{
+        text-align: center;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 1.9rem;
+        width: 100%;
+        color: #f7f2f2;
+        text-shadow: 5px 2px 10px black;
+        cursor: default;
+    }
+    h4.heading {
+        text-align: center;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 1.9rem;
+        width: 100%;
+        color: Black;
+        cursor: default;
+
+    }
+
+
+    .contact{
+        padding-top: 50px;
+        background-color: transparent; 
+
+    }
+
+    .padding{
+        padding: 2rem 0;
+    }
+    img.portfolio{
+        width: 100%;
+    }
+
+    .footer .row{
+        background-color: #505962;
+        padding: 1rem 2rem 3rem;
+        color: white;
+        cursor: default;
+    }
+    .footer img{
+        height: 5rem;
+    }
+
+
+
+    /*--- Home Page End--*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*--- Search Page --*/
+
+
+
+
+    .button3{
+        position: relative;
+        float: left;
+        margin-top: 40px;
+        margin-left: 5.25vw;
+        color: white;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: .5s;
+        overflow: hidden;
+    }
+    .button3:hover{
+        transform: scale(1.3);
+        background: transparent;
+
+    }
+    .button3 img{
+        height: 5rem;
+    }
+
+
+
+
+    .button4{
+        position: relative;
+        float: right;
+        margin-top: 70px;
+        margin-right: 5.25vw;
+        color: white;
+        background-color: #805ced;
+        font-family: century-gothic, sans-serif;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .button4:hover{
+        background:#056967;
+        transform: scale(1.3);
+        transition: .5s;
+
+    }
+    .button5{
+        position: relative;
+        top: 11rem;
+        left: 6.8vw;
+        color: Black;
+        background-color: rgba(128, 92, 237, 0.2);
+        border: 2px solid #805ced;
+        font-family: century-gothic, sans-serif;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .button5:hover{
+        background:#E9ECEF;
+        transform: scale(1.1);
+        transition: .5s;
+
+    }
+
+
+
+
+
+
+
+    @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 300;
+        src:url(https://fonts.gstatic.com/s/opensans/v13/DXI1ORHCpsQm3Vp6mXoaTRa1RVmPjeKy21_GQJaLlJI.woff) format('woff');
+    }
+
+    .caption2{
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: 17%;
+        z-index: -1;
+    }
+
+    .caption2 h1{
+        position: relative;
+        top: 5rem;
+        left: 6.5vw;
+        font-size: 5.2vw;
+        font-family: 'Open Sans';
+        color: #5783F3;
+        cursor: default;
+    }
+
+    .caption2 h2{
+        position: relative;
+        top: 8rem;
+        left: 6.5vw;
+        font-size: 3.14vw;
+        font-family:'Futura';
+        color: #652fb5;
+        cursor: default;
+    }
+    .caption2 h2 l{
+        color:#54C1FF;
+    }
+    .caption2 h2 l2{
+        color:#FCD121;
+    }
+
+
+
+    .searchbox{
+        position: relative;
+        top: 12rem;
+        height: 35px;
+        left: 7.8vw;
+        width: 86vw;
+        background: transparent;
+        border: 1.5px solid #652fb5;
+        max-width: 100%;
+    }
+
+    .Searchbutton1{
+        position: relative;
+        left: 7.8vw;
+        width:  86vw;
+        top: 13rem;
+        color: white;
+        font-size: 1.4rem;
+        background-color: #805ced;
+        font-family: century-gothic, sans-serif;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .Searchbutton1:hover{
+        background:#056967;
+        transition: 1s;
+
+    }
+
+    /*--- Search Page End --*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*--- Forecast Page --*/
+
+
+    .button8{
+        position: relative;
+        float: right;
+        margin-top: 10px;
+        margin-right: 2vw;
+        color: white;
+        background-color: #805ced;
+        font-family: century-gothic, sans-serif;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 10;
+    }
+    .button8:hover{
+        background:#056967;
+        transform: scale(1.15);
+        transition: .5s;
+
+    }
+
+
+    /*--- Overlay --*/
+
+
+
+    #overlaywrapper{
+        display: none;
+        position: fixed;
+        background-size: 400% 400%;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background:rgba(0, 0, 0, 0.95);
+        z-index: 2;
+    }
+
+    #overlay{
+        background-color: rgba(31, 133, 222, 0.5);
+        border-radius: 10px;
+        height: 40rem;
+        width: 80rem;
+        z-index: 5;
+        box-shadow: 30px 30px 40px black;
+    }
+    #overlay h1{
+        position: relative;
+        top: 1rem;
+        left: 3vw;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: default;
+
+    }
+    #overlay h2{
+        position: relative;
+        top: 1rem;
+        left: 1vw;
+        font-size: 3rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    #overlay h5{
+        position: relative;
+        left: 15px;
+        top: 10rem;
+        font-size: 2.5rem;
+        font-family: impact;
+        color: White;
+
+    }
+    #overlay h3{
+        top: 19rem;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+    .weather-icon2{
+        position: relative;
+        top: 1rem;
+        left: 15vw;
+        height: 9rem;
+    }
+
+    .temperature2{
+        position: relative;
+        display: flex;
+        top: 1rem;
+        width: 20rem;
+        left: 7vw;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .temperature2:hover{
+        transform: scale(1.02);
+
+    }
+
+    .temperature2 h4{
+        top: 1vw;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: pointer
+
+    }
+    .temperature2 span{
+        position: relative;
+        top: -1rem;
+        font-size: 2.5rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+
+
+
+    /*--- Overlay End --*/
+    .overlaywrapper2{
+        display: none;
+        position: fixed;
+        background-size: 400% 400%;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background:rgba(0, 0, 0, 0.95);
+        z-index: 10;
+    }
+    .noti{
+        background-color: rgba(168, 8, 0, 0.7);
+        margin-top: 15%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        height: 40vh;
+        width: 60vw;
+        box-shadow: 30px 30px 40px black;
+        display: none;
+        z-index: 10;
+    }
+    .notification{
+        position: relative;
+        display: none;
+        color: Darkred;
+        padding: 5px;
+        font-size: 3vw;
+        height: 20vh;
+        width: 40vw;
+        margin: 0 auto;
+        top: 10%;
+        background: lightblue;
+        border: 2px solid lightblue;
+        border-radius: 5px;
+        font-family: century-gothic, sans-serif;
+        padding-bottom: 2rem;
+        cursor: default;
+        position: relative;
+        z-index: 10;
+    }
+    .reload{
+        position: relative;
+        display: none;
+        margin: 0 auto;
+        top: 20%;
+        font-size: 3vw;
+        font-family: century-gothic, sans-serif;
+        color: darkred;
+        background: lightblue;
+        box-shadow:5px 5px 5px #7a7a7a;
+        width: 14vw;
+        height: 4rem;
+        border: none; 
+        border-radius: 7px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+        z-index: 10;
+    }
+    .reload:hover{
+        transform: scale(1.02);
+        background:#056967;
+        box-shadow: 5px 10px 10px black;
+        z-index: 10;
+    }
+
+
+
+
+
+
+
+    .caption3{
+        position: relative;
+        height: 350px;
+        background-color: #3E80FE;
+    }
+    .caption3 h1{
+        position: relative;
+        top: 0rem;
+        left: 2vw;
+        font-size: 4vw;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: default;
+
+    }
+    .caption3 h2{
+        position: relative;
+        top: 8rem;
+        font-size: 4vw;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    .caption3 h3{
+        position: relative;
+        top: 2vh;
+        font-size: 3vw;
+        font-family: impact;
+        color: White;
+
+    }
+
+
+    .changecitybutton{
+        position: absolute;
+        top: 5rem;
+        left: 9vw;
+        width: 10vw;
+        height: 2rem;
+        background: white;
+        border: none;
+        border-radius: 5px;
+        font-family: century-gothic, sans-serif;
+        color: #3E80FE; 
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .changecitybutton:hover{
+        background:#056967;
+        color: white;
+        transform: scale(1.1);
+        transition: .5s;
+    }
+    .changecitybutton i{
+        position: relative;
+        left: -13px;
+    }
+    .weather-icon{
+        position: absolute;
+        top: 8rem;
+        left: 10vw;
+        height: 9rem;
+    }
+
+    .temperature{
+        position: absolute;
+        display: flex;
+        top: 17rem;
+        width: 8rem;
+        left: 10vw;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .temperature:hover{
+        transform: scale(1.02);
+
+    }
+
+    .temperature h1{
+        top: 1vw;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: pointer
+
+    }
+    .temperature span{
+        position: relative;
+        top: -1rem;
+        font-size: 2.5rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+
+
+
+
+
+
+
+    .caption3s h1{
+        position: absolute;
+        top: 24rem;
+        left: 6.5vw;
+        font-size: 5vw;
+        font-family: century-gothic, sans-serif;
+        color: #16BD8E;
+        cursor: default;
+    }
+    .closetbutton{
+        position: absolute;
+        top: 15vw;
+        left:0vw;
+        font-size: 3vw;
+        font-family: century-gothic, sans-serif;
+        color: white;
+        background: #D31C1C;
+        box-shadow:5px 5px 5px #7a7a7a;
+        width: 14vw;
+        height: 4rem;
+        border: none; 
+        border-radius: 7px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .closetbutton:hover{
+        transform: scale(1.02);
+        background:#056967;
+        box-shadow: 5px 10px 10px black;
+    }
+
+
+
+
+
+
+
+
+    .catagorybutton{
+        position: relative;
+        box-shadow:5px 5px 5px #7a7a7a;
+        top: 2vw;
+        left: 40%;
+        width: 26vw;
+        height: 150px;
+        border: none; 
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+
+    }
+
+    .catagorybutton h1{
+        position: absolute;
+        top: 1vw;
+        left: 1vw;
+        font-size: 2.5vw;
+        font-family: century-gothic, sans-serif;
+        color: white;
+    }
+    .catagorybutton h2{
+        position: absolute;
+        top: 7rem;
+        left: 2.2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        font-family: century-gothic, sans-serif;
+        color: white;
+    }
+
+
+
+    #catagoryb1{
+        margin-right:1vw;
+        margin-bottom:1vw;  
+        background: #3E80FE;
+    }
+    #catagoryb1 img{
+        position: absolute;
+        top: 4rem;
+        height: 3rem;
+        left: 2.5rem;
+    }
+
+
+    #catagoryb2{ 
+        background: #16BD8E;
+    }
+    #catagoryb2 img{
+        position: absolute;
+        top: 4rem;
+        height: 3rem;
+        left: 2.5rem;
+    }
+
+
+    #catagoryb3{
+        margin-right:1vw;  
+        background: #FFC300;
+    }
+    #catagoryb3 img{
+        position: absolute;
+        top: 4rem;
+        height: 3rem;
+        left: 2.5rem;
+    }
+
+
+    #catagoryb4{ 
+        background: #3E80FE;
+    }
+    #catagoryb4 img{
+        position: absolute;
+        top: 4rem;
+        height: 3rem;
+        left: 2.5rem;
+    }
+
+
+    .catagorybutton:hover{
+        transform: scale(1.02);
+        background: #ff800a;
+        z-index: 2;
+        box-shadow: 5px 10px 10px black;
+    }
+
+
+
+
+    /*--- Forecast Page End--*/
+
+
+
+
+
+
+
+
+
+    /*--- Login Page--*/
+
+    #loginform{
+        position: fixed;
+        background: linear-gradient(to bottom, #3E80FE, #12b08e);
+        background-size: 400% 400%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .loginbox{
+        position: relative;
+        width: 320px;
+        height: 460px;
+        top: 47%;
+        left: 50%;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        position: relative;
+        background: inherit;
+        overflow: hidden;
+        border-radius: 5px;
+        border-radius: 10px;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        padding: 70px 30px;
+        z-index: 1;
+
+    }
+
+    .loginbox:before{
+        content: "";
+        position: absolute;
+        background: inherit;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);    
+        filter: blur(10px);
+        margin: -20px;
+        z-index: -1;
+
+    }
+
+
+
+
+    .loginbox h1{
+        margin-top: 7px;
+        padding: 0 0 15px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .loginbox p{
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    .loginbox input{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .loginbox input[type="text"], input[type="password"]
+    {
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
+    .loginbox input[type="phonenumber"]
+    {
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
+    .loginbox input[type="submit"]
+    {
+        border: none;
+        outline: none;
+        height: 40px;
+        background: #fb2525;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: background-color 1s ease 0s;
+    }
+    .loginbox input[type="submit"]:hover
+    {
+        cursor: pointer;
+        background: #056967;
+        color: white;
+    }
+
+    .loginbox option[type="select"]{
+        background-color: black;
+        color: white;
+    }
+    .loginbox select{
+        background-color: black;
+        color: white;
+    }
+
+
+    .loginbox a{
+        text-decoration: none;
+        color: 
+        font-size: 12px;
+        line-height: 20px;
+        color: #4d0d73;
+    }
+
+    .loginbox a:hover
+    {
+        color: #002cde;
+    }
+    .loginbox .avatar{
+        position: absolute;
+        top: .5rem;
+        left: 8rem; 
+        height: 4rem;
+    }
+
+
+
+
+
+
+    .button6{
+        position: absolute;
+        left: 10vw;
+        margin-top: 70px;
+        margin-right: 5.25vw;
+        width: 10rem;
+        color: white;
+        background-color: #056967;
+        font-family: century-gothic, sans-serif;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .button6:hover{
+        background:#805ced;
+        transform: scale(1.3);
+        transition: .5s;
+
+    }
+
+    .button7{
+        position: absolute;
+        left: 80vw;
+        width: 10rem;
+        margin-top: 70px;
+        margin-right: 5.25vw;
+        color: white;
+        background-color: #056967;
+        font-family: century-gothic, sans-serif;
+        font-size: 1.5rem;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .button7:hover{
+        background:#805ced;
+        transform: scale(1.3);
+        transition: .5s;
+
+    }
+
+
+
+
+
+    /*--- Login Page End--*/
+}
+
+
+
+@media screen and (max-width: 785px){
+    /*--- Home Page --*/
+    .background{
+        background: linear-gradient(to right, #6543cc, #729bdb);
+        background-size: 400% 400%;
+        animation: BackgroundGradient 5s ease infinite;
+    }
+                
+    @keyframes BackgroundGradient {
+
+        0% {background-position: 0% 50%;}
+        50% {background-position: 100% 50%;}
+        100% {background-position: 0% 50%;}
+        
+    }
+
+
+    #logo{
+        height: 2rem;
+        transition: .3s;
+        overflow: hidden;
+    }
+
+    #logo:hover{
+        transform: scale(1.3);
+        background: transparent;
+
+    }
+
+
+    .navbar{
+        text-transform: uppercase;
+        font-family: sans-serif;
+    }
+
+
+
+
+    /*--- For Other Platforms --*/
+
+    .landing {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+    }
+    .home-wrap {
+        clip: rect(0, auto, auto, 0);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .home-inner {
+        position: fixed;
+        display: table;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center center;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        will-change: transform;
+    }
+
+
+
+
+    .caption{
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        top: 5rem;
+        z-index: 1;
+    }
+
+    .caption img{
+        height:12rem; 
+    }   
+    .caption h1{
+        color: white;
+        font-size: 3.4rem;
+        font-family: century-gothic, sans-serif;
+        padding-bottom: 2rem;
+        cursor: default;
+    }
+    .caption h2{
+        color: white;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        padding-bottom: 2rem;
+        cursor: default;
+    } 
+
+
+
+
+    /*buttons*/
+
+    .button1{
+        left: 50%;
+        top: 130%;
+        width:12rem;
+        border-radius: 10px;
+        transform: translateX(-0%) translateY(-0%);
+        font-family: century-gothic, sans-serif;
+        color: #fff;
+        font-weight: 400;
+        text-align: center;
+        font-size: 2rem;
+        background: linear-gradient(to right, #1be0a2, #12b08e);
+        background-size: 400% 400%;
+        animation: BackgroundGradient 5s ease infinite;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        box-shadow: 5px 10px 20px #3A514E;
+
+    }
+    .button1:hover{
+        background:#056967;
+        transition: 1.8s;
+
+    }
+    .button1:focus{
+        outline: none;
+    } 
+    .button1:before{
+        content:'';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,.5 );
+        width: 60px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        opacity: .5s;
+        filter: blur(30px);
+        transform: translateX(-130px) skewX(-15deg);
+    }
+    .button1:after{
+        content:'';
+        display: block;
+        position: absolute;
+        background: rgba(255,255,255,.2 );
+        width: 30px;
+        height: 100%;
+        left: 30px;
+        top: 0;
+        opacity: 0;
+        filter: blur(30px);
+        transform: translateX(-100px) scaleX(-15deg);
+    }
+
+    .button1:hover:before{
+      transform: translateX(500px) skewX(-15deg);
+      opacity: .6;
+      transition: .7s ;
+    }
+
+    .button1:hover:after{
+      transform: translateX(300px) skewX(-15deg);
+      opacity: 1;
+      transition: .7s ;
+    }
+
+
+    .button2{
+        position: relative;
+        left: 1rem;
+        width: 200px;
+        height: 200px;
+        padding: 0px;
+        border: 1px solid #E9ECEF; 
+        border-radius: 50%;
+        cursor: pointer;
+        overflow: hidden;
+        margin: 5px auto;
+        display: inline-block;
+        transition: 1s;
+
+
+    }
+
+    .button2:hover{
+        transform: scale(1.3);
+        background: #ff800a;
+        z-index: 2;
+        box-shadow: 5px 10px 10px black;
+    }
+
+
+
+    h3.heading{
+        text-align: center;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 1.9rem;
+        width: 100%;
+        color: #f7f2f2;
+        text-shadow: 5px 2px 10px black;
+        cursor: default;
+    }
+    h4.heading {
+        text-align: center;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        text-transform: uppercase;
+        margin-bottom: 1.9rem;
+        width: 100%;
+        color: Black;
+        cursor: default;
+
+    }
+
+
+    .contact{
+        padding-top: 50px;
+        background-color: transparent; 
+
+    }
+
+    .padding{
+        padding: 2rem 0;
+    }
+    .padding .row{
+        width: 100%;
+    }
+    img.portfolio{
+        width: 100%;
+    }
+
+    .footer .row{
+        background-color: #505962;
+        padding: 1rem 2rem 3rem;
+        color: white;
+        cursor: default;
+    }
+    .footer img{
+        height: 5rem;
+    }
+
+    /*--- Home Page End--*/
+
+
+    /*--- Search Page --*/
+
+    #overlaywrapper2{
+        display: none;
+        position: fixed;
+        background-size: 400% 400%;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background:rgba(0, 0, 0, 0.95);
+        z-index: 2;
+    }
+
+    #overlay2{
+        background-color: rgba(31, 133, 222, 0.5);
+        border-radius: 10px;
+        height: 40rem;
+        width: 80rem;
+        z-index: 5;
+        box-shadow: 30px 30px 40px black;
+    }
+    #overlay2 h1{
+        position: relative;
+        top: 1rem;
+        left: 3vw;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: default;
+
+    }
+    #overlay2 h2{
+        position: relative;
+        top: 1rem;
+        left: 1vw;
+        font-size: 3rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    #overlay2 h5{
+        position: relative;
+        left: 15px;
+        top: 10rem;
+        font-size: 2.5rem;
+        font-family: impact;
+        color: White;
+
+    }
+    #overlay2 h3{
+        top: 19rem;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+    #weather-icon2{
+        position: relative;
+        top: 1rem;
+        left: 15vw;
+        height: 9rem;
+    }
+
+    #temperature2{
+        position: relative;
+        display: flex;
+        top: 1rem;
+        width: 20rem;
+        left: 7vw;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    #temperature2:hover{
+        transform: scale(1.02);
+
+    }
+
+    #temperature2 h4{
+        top: 1vw;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: pointer
+
+    }
+    #temperature2 span{
+        position: relative;
+        top: -1rem;
+        font-size: 2.5rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+
+    /*--- Overlay End --*/
+
+
+
+
+
+
+    .citysrc{
+        display: block;
+    }
+    .forcastoverlay{
+        display: none;
+    }
+
+
+
+
+
+
+
+    .button3{
+        position: relative;
+        float: left;
+        margin-top: 1vh;
+        margin-left: 1.5vw;
+        color: white;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: .5s;
+        overflow: hidden;
+    }
+    .button3:hover{
+        transform: scale(1.3);
+        background: transparent;
+
+    }
+    .button3 img{
+        height: 3rem;
+    }
+
+
+
+
+    .button4{
+        position: relative;
+        float: right;
+        margin-top: 2vh;
+        margin-right: 4vw;
+        color: white;
+        background-color: #805ced;
+        font-family: century-gothic, sans-serif;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .button4:hover{
+        background:#056967;
+        transform: scale(1.3);
+        transition: .5s;
+
+    }
+    .button5{
+        position: relative;
+        top: 6rem;
+        left: 6vw;
+        color: Black;
+        background-color: rgba(128, 92, 237, 0.2);
+        border: 2px solid #805ced;
+        font-family: century-gothic, sans-serif;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .button5:hover{
+        background:#E9ECEF;
+        transform: scale(1.1);
+        transition: .5s;
+
+    }
+
+
+
+
+
+
+
+
+
+    .caption2{
+        width: 90%;
+        max-width: 100%;
+        position: absolute;
+        top: 17%;
+        z-index: -1;
+    }
+
+    .caption2 h1{
+        position: relative;
+        top: 1rem;
+        left: 6.5vw;
+        font-size: 3rem;
+        font-family: century-gothic, sans-serif;
+        color: #5783F3;
+        cursor: default;
+    }
+
+    .caption2 h2{
+        position: relative;
+        top: 4rem;
+        left: 6.5vw;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        color: #652fb5;
+        cursor: default;
+    }
+    .caption2 h2 l{
+        color:#54C1FF;
+    }
+    .caption2 h2 l2{
+        color:#FCD121;
+    }
+
+
+
+    .searchbox{
+        position: relative;
+        top: 7rem;
+        height: 35px;
+        left: 7.8vw;
+        width: 86vw;
+        background: transparent;
+        border: 1.5px solid #652fb5;
+        max-width: 100%;
+    }
+
+    .Searchbutton1{
+        position: relative;
+        left: 7.8vw;
+        width:  86vw;
+        top: 8rem;
+        color: white;
+        font-size: 1.4rem;
+        background-color: #805ced;
+        font-family: century-gothic, sans-serif;
+        border-radius: 10px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .Searchbutton1:hover{
+        background:#056967;
+        transition: 1s;
+
+    }
+
+    /*--- Search Page End --*/
+
+
+
+
+
+
+
+    /*--- Forecast Page --*/
+
+
+
+
+
+    .button8{
+        position: relative;
+        float: right;
+        right: 5px;
+        top: 1vh;
+        color: white;
+        font-size: 21px;
+        background-color: #805ced;
+        font-family: century-gothic, sans-serif;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+        z-index: 10;
+    }
+    .button8:hover{
+        background:#056967;
+        transform: scale(1.15);
+        transition: .5s;
+
+    }
+
+
+
+
+    #overlaywrapper{
+        display: none;
+        position: fixed;
+        background-size: 400% 400%;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background:rgba(0, 0, 0, 0.95);
+        z-index: 2;
+    }
+
+    #overlay{
+        width: 500px;
+        height: 650px;
+        border-radius: 10px;
+        background-color: rgb(16, 95, 190);
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    #overlay h1{
+        position: absolute;
+        text-align: center;
+        font-size: 3.5rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: default;
+
+    }
+    #overlay h3{
+        position: relative;
+        text-align: center;
+        top: 11rem;
+        font-size: 3rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    #overlay h5{
+        position: absolute;
+        text-align: center;
+        top: 45rem;
+        font-size: 2.5rem;
+        font-family: impact;
+        color: White;
+
+    }
+    .weather-icon2{
+        position: absolute;
+        text-align: center;
+        top: 36rem;
+        height: 9rem;
+    }
+
+
+    .temperature2{
+        position: absolute;
+        display: flex;
+        top: 17rem;
+
+
+    }
+    .temperature2 h4{
+        font-size: 2.7rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    .temperature2 span{
+        position: relative;
+        top: -.5rem;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+
+    /*--- Overlay End --*/
+    .overlaywrapper2{
+        display: none;
+        position: fixed;
+        background-size: 400% 400%;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background:rgba(0, 0, 0, 0.95);
+        z-index: 10;
+    }
+    .noti{
+        width: 600px;
+        height: 500px;
+        overflow-wrap: break-word;
+        border-radius: 10px;
+        margin-top: 20%;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(16, 95, 190);
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .notification{
+        position: absolute;
+        text-align: center;
+        display: none;
+        color: Darkred;
+        margin-left: auto;
+        padding: 5px;
+        font-size: 6vw;
+        height: 18rem;
+        width:  30rem;
+        margin: 0 auto;
+        top: 10%;
+        background: lightblue;
+        border: 2px solid lightblue;
+        border-radius: 5px;
+        font-family: century-gothic, sans-serif;
+        padding-bottom: 2rem;
+        cursor: default;
+        position: relative;
+        z-index: 10;
+    }
+    .reload{
+        position: relative;
+        display: none;
+        margin: 0 auto;
+        top: 7.5rem;
+        font-size: 2.5rem;
+        font-family: century-gothic, sans-serif;
+        color: darkred;
+        background: lightblue;
+        box-shadow:5px 5px 5px #7a7a7a;
+        width: 10rem;
+        height: 4rem;
+        border: none; 
+        border-radius: 7px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+        z-index: 10;
+    }
+    .reload:hover{
+        transform: scale(1.02);
+        background:#056967;
+        box-shadow: 5px 10px 10px black;
+        z-index: 10;
+    }
+
+
+
+
+
+
+
+
+
+    .caption3{
+        position: relative;
+        height: 350px;
+        background-color: #3E80FE;
+    }
+    .caption3 h1{
+        position: relative;
+        top: -2rem;
+        left: 1vw;
+        font-size: 9vw;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: default;
+
+    }
+    .caption3 h2{
+        position: relative;
+        top: 21vh;
+        left: 3vw;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    .caption3 h3{
+        position: absolute;
+        top: 4rem;
+        left: 7rem;
+        font-size: 2rem;
+        font-family: impact;
+        color: White;
+
+    }
+
+    .changecitybutton{
+        position: absolute;
+        top: 5rem;
+        left: 1rem;
+        width: 10rem;
+        height: 2rem;
+        background: white;
+        border: none;
+        border-radius: 5px;
+        font-family: century-gothic, sans-serif;
+        color: #3E80FE; 
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .changecitybutton:hover{
+        background:#056967;
+        color: white;
+        transform: scale(1.1);
+        transition: .5s;
+    }
+    .changecitybutton i{
+        position: relative;
+        left: -13px;
+    }
+    .weather-icon{
+        position: absolute;
+        width: 80%;
+        top: 8rem;
+        left: 2rem;
+        height: 9rem;
+    }
+
+    .temperature{
+        position: absolute;
+        display: flex;
+        top: 16rem;
+        width: 9rem;
+        left: 2rem;
+        align-items: center;
+        overflow: hidden;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    .temperature:hover{
+        transform: scale(1.02);
+
+    }
+
+    .temperature h1{
+        top: 1vw;
+        font-size: 10vw;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    .temperature span{
+        position: relative;
+        left: 1vw;
+        top: -1rem;
+        font-size: 3rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+
+    .caption3s{
+        position: absolute;
+        width: 90%;
+        left: 1vw;
+        top: 23rem;
+    }
+
+    .caption3s h1{
+        position: absolute;
+        font-size: 8vw;
+        font-family: century-gothic, sans-serif;
+        color: #16BD8E;
+        cursor: default;
+    }
+    .closetbutton{
+        position: relative;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        color: white;
+        background: #D31C1C;
+        box-shadow:5px 5px 5px #7a7a7a;
+        width: 10rem;
+        height: 7rem;
+        border: 1px solid #D31C1C; 
+        border-radius: 7px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    .closetbutton:hover{
+        transform: scale(1.02);
+        background:#056967;
+        box-shadow: 5px 10px 10px black;
+    }
+
+
+
+
+
+
+
+
+    .catagorybutton{
+        position: relative;
+        box-shadow:5px 5px 5px #7a7a7a;
+        top: 2vw;
+        left: 32vw;
+        width: 14.5rem;
+        height: 14.5rem;
+        border: none; 
+        border-radius: 10px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+
+    }
+
+    .catagorybutton h1{
+        position: absolute;
+        top: 1vw;
+        left: 0.5vw;
+        font-size: 2rem;
+        font-family: century-gothic, sans-serif;
+        color: white;
+    }
+    .catagorybutton h2{
+        position: absolute;
+        top: 12rem;
+        left: 1rem;
+        font-size: 1.5rem;
+        font-weight: bold;
+        font-family: century-gothic, sans-serif;
+        color: white;
+    }
+
+
+
+    #catagoryb1{
+        margin-right:1rem;
+        margin-bottom:1rem;  
+        background: #3E80FE;
+    }
+    #catagoryb1 img{
+        position: absolute;
+        top: 4rem;
+        height: 7rem;
+        left: 0.5rem;
+    }
+
+
+    #catagoryb2{ 
+        background: #16BD8E;
+    }
+    #catagoryb2 img{
+        position: absolute;
+        top: 4rem;
+        height: 7rem;
+        left: 0.5rem;
+    }
+
+
+    #catagoryb3{
+        margin-right:1rem;  
+        background: #FFC300;
+    }
+    #catagoryb3 img{
+        position: absolute;
+        top: 4rem;
+        height: 7rem;
+        left: 0.5rem;
+    }
+
+
+    #catagoryb4{ 
+        background: #3E80FE;
+    }
+    #catagoryb4 img{
+        position: absolute;
+        top: 4rem;
+        height: 7rem;
+        left: 0.5rem;
+    }
+
+
+    .catagorybutton:hover{
+        transform: scale(1.02);
+        background: #ff800a;
+        z-index: 2;
+        box-shadow: 5px 10px 10px black;
+    }
+
+
+
+
+
+
+
+
+
+
+    /*--- Forecast Page End--*/
+
+
+
+
+
+
+
+
+
+    /*--- Login Page--*/
+
+    #loginform{
+        position: fixed;
+        background: linear-gradient(to bottom, #00b7ff, #03dffc);
+        background-size: 400% 400%;
+        height: 100%;
+        width: 100%;
+    }
+
+    .loginbox{
+        position: relative;
+        width: 320px;
+        height: 460px;
+        top: 47%;
+        left: 50vw;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        position: relative;
+        background: inherit;
+        overflow: hidden;
+        border-radius: 5px;
+        border-radius: 10px;
+        transform: translate(-50%,-50%);
+        box-sizing: border-box;
+        padding: 70px 30px;
+        z-index: 1;
+
+    }
+
+    .loginbox:before{
+        content: "";
+        position: absolute;
+        background: inherit;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);    
+        filter: blur(10px);
+        margin: -20px;
+        z-index: -1;
+
+    }
+
+
+
+
+    .loginbox h1{
+        margin-top: 7px;
+        padding: 0 0 15px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .loginbox p{
+        margin: 0;
+        padding: 0;
+        font-weight: bold;
+    }
+
+    .loginbox input{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .loginbox input[type="text"], input[type="password"]
+    {
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
+    .loginbox input[type="phonenumber"]
+    {
+        border: none;
+        border-bottom: 1px solid #fff;
+        background: transparent;
+        outline: none;
+        height: 40px;
+        color: #fff;
+        font-size: 16px;
+    }
+    .loginbox input[type="submit"]
+    {
+        border: none;
+        outline: none;
+        height: 40px;
+        background: #fb2525;
+        color: #fff;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-top: 10px;
+        transition: background-color 1s ease 0s;
+    }
+    .loginbox input[type="submit"]:hover
+    {
+        cursor: pointer;
+        background: #056967;
+        color: white;
+    }
+
+    .loginbox option[type="select"]{
+        background-color: black;
+        color: white;
+    }
+    .loginbox select{
+        background-color: black;
+        color: white;
+    }
+
+
+    .loginbox a{
+        text-decoration: none;
+        color: 
+        font-size: 12px;
+        line-height: 20px;
+        color: #4d0d73;
+    }
+
+    .loginbox a:hover
+    {
+        color: #002cde;
+    }
+    .loginbox .avatar{
+        position: absolute;
+        top: .5rem;
+        left: 8rem; 
+        height: 4rem;
+    }
+
+
+
+
+
+
+    .button6{
+        position: relative;
+        left: 5vw;
+        margin-top: 5px;
+        margin-right: 5.25vw;
+        width: 10rem;
+        color: white;
+        background-color: #36e088;
+        font-family: century-gothic, sans-serif;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .button6:hover{
+        background:#805ced;
+        transform: scale(1.15);
+        transition: .5s;
+
+    }
+
+    .button7{
+        position: relative;
+        width: 10rem;
+        margin-top: 5px;
+        left: 4.9rem;
+        color: white;
+        background-color: #36e088;
+        font-family: century-gothic, sans-serif;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        padding: 5px;
+        border: none;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .button7:hover{
+        background:#805ced;
+        transform: scale(1.15);
+        transition: .5s;
+
+    }
+}
+
+
+
 /*---Large Mobile--*/
 
 @media screen and (max-width: 425px){
@@ -251,7 +2491,135 @@
 
 
     /*--- Search Page --*/
+    #overlaywrapper2{
+        display: none;
+        position: fixed;
+        background-size: 400% 400%;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background:rgba(0, 0, 0, 0.95);
+        z-index: 2;
+    }
 
+    #overlay2{
+        background-color: rgba(31, 133, 222, 0.5);
+        border-radius: 10px;
+        height: 40rem;
+        width: 80rem;
+        z-index: 5;
+        box-shadow: 30px 30px 40px black;
+    }
+    #overlay2 h1{
+        position: relative;
+        top: 1rem;
+        left: 3vw;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: default;
+
+    }
+    #overlay2 h2{
+        position: relative;
+        top: 1rem;
+        left: 1vw;
+        font-size: 3rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+    #overlay2 h5{
+        position: relative;
+        left: 15px;
+        top: 10rem;
+        font-size: 2.5rem;
+        font-family: impact;
+        color: White;
+
+    }
+    #overlay2 h3{
+        top: 19rem;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+    #weather-icon2{
+        position: relative;
+        top: 1rem;
+        left: 15vw;
+        height: 9rem;
+    }
+
+    #temperature2{
+        position: relative;
+        display: flex;
+        top: 1rem;
+        width: 20rem;
+        left: 7vw;
+        align-items: center;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+    #temperature2:hover{
+        transform: scale(1.02);
+
+    }
+
+    #temperature2 h4{
+        top: 1vw;
+        font-size: 4rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+        cursor: pointer
+
+    }
+    #temperature2 span{
+        position: relative;
+        top: -1rem;
+        font-size: 2.5rem;
+        font-family: century-gothic, sans-serif;
+        color: White;
+
+    }
+
+
+    #closetbutton{
+        position: relative;
+        font-size: 1.5rem;
+        left: -5.5rem;
+        top: 3rem;
+        font-family: century-gothic, sans-serif;
+        color: white;
+        background: #D31C1C;
+        box-shadow:5px 5px 5px #7a7a7a;
+        width: 7rem;
+        height: 3rem;
+        border: 1px solid #D31C1C; 
+        border-radius: 7px;
+        cursor: pointer;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+
+
+    /*--- Overlay End --*/
+
+
+
+
+
+
+    .citysrc{
+        display: block;
+    }
+    .forcastoverlay{
+        display: none;
+    }
 
 
 
@@ -373,7 +2741,16 @@
         border: 1.5px solid #652fb5;
         max-width: 100%;
     }
+    #country{
+        position: relative;
+        top: 6rem;
+        left: 15vw;
+        height: 35px;
+        background: transparent;
+        border: 1.5px solid #652fb5;
+        border-radius: 5px;
 
+    }
     .Searchbutton1{
         position: relative;
         left: 7.8vw;
@@ -448,7 +2825,7 @@
 
     #overlay{
         width: 350px;
-        height: 500px;
+        height: 520px;
         border-radius: 10px;
         background-color: rgb(16, 95, 190);
         display: flex;
@@ -458,7 +2835,7 @@
     #overlay h1{
         position: absolute;
         text-align: center;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-family: century-gothic, sans-serif;
         color: White;
         cursor: default;
@@ -476,7 +2853,7 @@
     #overlay h5{
         position: absolute;
         text-align: center;
-        top: 31.8rem;
+        top: 37rem;
         font-size: 1.5rem;
         font-family: impact;
         color: White;
@@ -485,7 +2862,7 @@
     .weather-icon2{
         position: absolute;
         text-align: center;
-        top: 22rem;
+        top: 24rem;
         height: 9rem;
     }
 
@@ -493,7 +2870,7 @@
     .temperature2{
         position: absolute;
         display: flex;
-        top: 10rem;
+        top: 14rem;
 
 
     }
@@ -511,6 +2888,7 @@
         color: White;
 
     }
+
 
 
     /*--- Overlay End --*/
@@ -601,7 +2979,8 @@
     .caption3 h1{
         position: relative;
         left: 1vw;
-        font-size: 12vw;
+        top: -1rem;
+        font-size: 8vw;
         font-family: century-gothic, sans-serif;
         color: White;
         cursor: default;
@@ -628,7 +3007,7 @@
 
     .changecitybutton{
         position: absolute;
-        top: 5rem;
+        top: 5.5rem;
         left: 1rem;
         width: 10rem;
         height: 2rem;
@@ -686,7 +3065,7 @@
         position: relative;
         left: 1vw;
         top: -1rem;
-        font-size: 3rem;
+        font-size: 2rem;
         font-family: century-gothic, sans-serif;
         color: White;
 
@@ -710,6 +3089,7 @@
     .closetbutton{
         position: relative;
         font-size: 1.5rem;
+        top: 3rem;
         font-family: century-gothic, sans-serif;
         color: white;
         background: #D31C1C;
@@ -1026,24 +3406,8 @@
 
     }
 }
-@media screen and (min-height: 890px){
 
 
-    #overlay h5{
-        position: absolute;
-        text-align: center;
-        top: 36rem;
-    }
-    .weather-icon2{
-        top: 27rem;
-    }
-
-
-    .temperature2{
-        top: 15rem;
-    }
-
-}
 
 /*---Medium Mobile--*/
 
@@ -1251,7 +3615,6 @@
     }
     /*--- Login Page End--*/
 }
-
 
 @media screen and (max-width: 320px){
     /*--- Home Page --*/
