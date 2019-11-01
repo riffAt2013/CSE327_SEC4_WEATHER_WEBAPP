@@ -177,7 +177,7 @@ function searchWeatherStat(long,lat,name){
             "Too hot! A t-shirt is a must.",
             "A pair of slipper will let your feet breathe.",
             "Lots of clouds in the sky. Could be a rain shower happening soon. Don't forget your umbrella. Also you can wear a rain coat instead.",
-            "Its raining cats & dogs. A rain coat is a must.",
+            "Its raining cats & dogs. A raincoat is a must.",
             "Temperature can drop. A button shirt will keep you warm.",
             "In this rainy day there is no alternate of a pair of boot."
           ];
@@ -219,7 +219,7 @@ function searchWeatherStat(long,lat,name){
 
                 }
                 if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("RAINCOAT","SHIRT","TROUSER","SNEAKER");
+                    giveSuggestions("BLANK","SHIRT","TROUSER","SNEAKER");
                 }
                 if(temp > 25 && temp <= 30 ){
                     giveSuggestions("BLANK","T-SHIRT","TROUSER","SNEAKER");
