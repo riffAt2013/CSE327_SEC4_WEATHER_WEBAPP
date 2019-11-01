@@ -529,7 +529,7 @@ img.portfolio{
     justify-content: center;
     align-items: center;
     background:rgba(0, 0, 0, 0.95);
-    z-index: 2;
+    z-index: 25;
 }
 
 #overlay{
@@ -701,8 +701,7 @@ img.portfolio{
 .caption3 h1{
     position: relative;
     top: 0rem;
-    left: 2vw;
-    font-size: 4vw;
+    font-size: 3.5vw;
     font-family: century-gothic, sans-serif;
     color: White;
     cursor: default;
@@ -809,7 +808,7 @@ img.portfolio{
 }
 .closetbutton{
     position: absolute;
-    top: 15vw;
+    top: 13vw;
     left:0vw;
     font-size: 3vw;
     font-family: century-gothic, sans-serif;
@@ -817,7 +816,7 @@ img.portfolio{
     background: #D31C1C;
     box-shadow:5px 5px 5px #7a7a7a;
     width: 14vw;
-    height: 4rem;
+    height: 7rem;
     border: none; 
     border-radius: 7px;
     cursor: pointer;
@@ -846,7 +845,6 @@ img.portfolio{
     height: 150px;
     border: none; 
     border-radius: 10px;
-    cursor: pointer;
     overflow: hidden;
     transition: 0.3s;
 
@@ -926,6 +924,61 @@ img.portfolio{
     box-shadow: 5px 10px 10px black;
 }
 
+
+
+.details{
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,.9);
+    transform: translateY(-50%);
+    transform: scaleY(0);
+    transition: transform .5s;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    z-index: 10;
+}
+.catagorybutton:hover .details{
+    transform: scaleY(1);
+}
+
+.details h1{
+    position: relative;
+    text-align: center;
+    font-size: 2vw;
+    top: -1.2rem;
+}
+.details p{
+    position: relative;
+    text-align: center;
+    font-size: 1vw;
+    top: -1rem;
+
+}
+
+.details a{
+    position: absolute;
+    top: 6rem;
+    left: 20vw;
+    padding: 3px;
+    font-size: 1vw;
+    text-decoration: none;
+    color: white;
+    background: #056967;
+    border-radius: 10px;
+    transition: .5s;
+}
+.details a:hover{
+    transform: scale(1.02);
+    background:#056967;
+    box-shadow: 5px 10px 10px black;
+}
+
+
 /*--- Forecast Dress Suggestion--*/
 
 
@@ -944,7 +997,7 @@ img.portfolio{
 
 #loginform{
     position: fixed;
-    background: linear-gradient(to bottom, #3E80FE, #12b08e);
+    background: linear-gradient(to bottom, #00b7ff, #03dffc);
     background-size: 400% 400%;
     height: 100%;
     width: 100%;
