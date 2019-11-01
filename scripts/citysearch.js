@@ -45,6 +45,20 @@ document.getElementById('searchButton').addEventListener('click', () =>{
     }
 
 })
+document.getElementById('searchInput').addEventListener('keyup', (e) =>{
+    if(e.keyCode === 13 ){
+        let searchTerm = document.getElementById('searchInput').value;
+        let countryTerm = document.getElementById('country').value;
+        if(searchTerm && countryTerm){
+            forecastovrlay.style.display = 'block';
+            citysrcovrlay.style.display = 'none';
+            searchWeather(searchTerm,countryTerm);
+        }
+        else{
+            document.location = "citysearch.html";
+        }
+    }
+})
 function cityName(name){
     return name.charAt(0).toUpperCase() + name.slice(1);
 }
@@ -64,7 +78,7 @@ function searchWeatherStat(long,lat,name){
         const temperatureSpan2 = document.querySelector('.temperature2 span');
     
         const proxy = "https://cors-anywhere.herokuapp.com/";
-        const api = `${proxy}https://api.darksky.net/forecast/bb6a00ed5b7005e1c10d05d9da831179/${lat},${long}?exclude=flags,alerts,daily,minutely`;
+        const api = `${proxy}https://api.darksky.net/forecast/bb6a00ed5b7005e1c10d05d9da831179/${lat},${long}?exclude=hourly,flags,alerts,daily,minutely`;
             
         fetch(api)
             .then(response => {
@@ -152,19 +166,19 @@ function searchWeatherStat(long,lat,name){
 
                 }
                 if(temp > 10 && temp <= 15 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 15 && temp <= 20 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 30){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
             if(icon.match(/clear-night/gi)){
@@ -172,19 +186,19 @@ function searchWeatherStat(long,lat,name){
 
                 }
                 if(temp > 10 && temp <= 15 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 15 && temp <= 20 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 30){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
             if(icon.match(/rain/gi)){
@@ -192,19 +206,19 @@ function searchWeatherStat(long,lat,name){
 
                 }
                 if(temp > 10 && temp <= 15 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 15 && temp <= 20 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 30){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
             if(icon.match(/wind/gi)){
@@ -212,19 +226,19 @@ function searchWeatherStat(long,lat,name){
 
                 }
                 if(temp > 10 && temp <= 15 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 15 && temp <= 20 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 30){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
             if(icon.match(/fog/gi)){
@@ -232,19 +246,19 @@ function searchWeatherStat(long,lat,name){
 
                 }
                 if(temp > 10 && temp <= 15 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 15 && temp <= 20 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 30){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
             if(icon.match(/cloudy/gi)){
@@ -252,19 +266,19 @@ function searchWeatherStat(long,lat,name){
 
                 }
                 if(temp > 10 && temp <= 15 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 15 && temp <= 20 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 30){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
             if(icon.match(/partly-cloudy-day/gi)){
@@ -272,19 +286,19 @@ function searchWeatherStat(long,lat,name){
 
                 }
                 if(temp > 10 && temp <= 15 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 15 && temp <= 20 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 30){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
             if(icon.match(/partly-cloudy-night/gi)){
@@ -292,19 +306,19 @@ function searchWeatherStat(long,lat,name){
 
                 }
                 if(temp > 10 && temp <= 15 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 15 && temp <= 20 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
                 if(temp > 30){
-                    giveSuggestions("BARE","T-SHIRTS","TROUSERS","SNEAKERS");
+                    giveSuggestions("BLANK","T-SHIRTS","TROUSERS","SNEAKERS");
                 }
             }
 
@@ -327,7 +341,7 @@ function hourlyWeather(long,lat,name){
 
 
 			const proxy = "https://cors-anywhere.herokuapp.com/";
-			const api = `${proxy}https://api.darksky.net/forecast/bb6a00ed5b7005e1c10d05d9da831179/${lat},${long}?exclude=flags,alerts,daily,minutely`;
+			const api = `${proxy}https://api.darksky.net/forecast/bb6a00ed5b7005e1c10d05d9da831179/${lat},${long}?exclude=currently,flags,alerts,daily,minutely`;
 			
 
 			fetch(api)
