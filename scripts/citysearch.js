@@ -388,11 +388,8 @@ function searchWeatherStat(long,lat,name){
                         dressDescriptionFootwear.textContent = descriptions[i];
                     }
                 }
+            }
         }
-
-
-
-}
 function hourlyWeather(long,lat,name){
 	let temperatureDescriptionHourly = document.querySelector('.temperature-hourly-description');
 
