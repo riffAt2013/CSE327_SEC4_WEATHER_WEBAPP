@@ -1,5 +1,4 @@
 
-
 /*--- Home Page --*/
 
 body {
@@ -28,7 +27,7 @@ body {
     left: 90vw;
     background: linear-gradient(to right, #6543cc, #729bdb);
     background-size: 400% 400%;
-    animation: BackgroundGradient 1s ease infinite;
+    animation: BackgroundGradient 2s ease infinite;
     border: 2px solid #E9ECEF;
     border-radius: 5px;
     color: white;
