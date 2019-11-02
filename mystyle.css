@@ -1,0 +1,15 @@
+body
+{
+	position: fixed;
+    background: linear-gradient(to bottom, #3E80FE, #12b08e);
+    background-size: 400% 400%;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+h1
+{
+	text-align: center;
+}
