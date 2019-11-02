@@ -15,9 +15,13 @@ let dressDescriptionTop = document.querySelector(".description2");
 let dressDescriptionBottom = document.querySelector(".description3");
 let dressDescriptionFootwear = document.querySelector(".description4");
 
+
 const searchElement = document.querySelector('[data-city-search]');
 const forecastovrlay = document.querySelector(".forcastoverlay");
 const citysrcovrlay = document.querySelector(".citysrc");
+
+
+
 
 function searchWeather(searchTerm,countryTerm){
     searchTerm1 = searchTerm+","+countryTerm;
@@ -167,6 +171,8 @@ function searchWeatherStat(long,lat,name){
             var strTime = hours + ':' + minutes + ' ' + ampm;
             return strTime;
         } 
+
+
 
 
         var descriptions = [
