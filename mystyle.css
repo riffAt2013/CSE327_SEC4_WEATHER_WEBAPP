@@ -13,3 +13,54 @@ h1
 {
 	text-align: center;
 }
+
+
+
+.loginbox input[type=text],input[type=password]
+{
+	border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+
+.loginbox input[type=email],input[type=tel]
+{
+	border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+	
+}
+
+
+
+.loginbox input[type=submit]
+{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px 0;
+	margin-top: 30px;
+	outline: none;
+	border: none;
+	background: #60adde;
+	opacity: 0.7;
+	border-radius: 20px;
+	font-size: 20px;
+	color: #fff;
+}
+
+.loginbox input[type=submit]:hover
+{
+	background: #003366;
+	opacity: 0.7;
+}
+
