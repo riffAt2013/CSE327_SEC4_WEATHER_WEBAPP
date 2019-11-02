@@ -18,7 +18,8 @@ TBW
 ## Checklist
 
 - [ ] SRS
-- [ ] SDSrifa
+- [ ] SDS?
+- [ ] Project Proposal Upload
 - [x] Use of GIT
 - [x] Utilization of Popular framework (done by flask)
 - [ ] Use of Artificial Intelligence
@@ -26,5 +27,5 @@ TBW
 - [ ] Source Code Comments
 - [ ] Unit Testing
 - [x] UI Design
-- [ ] Cross Platform Implementation
+- [x] Cross Platform Implementation (UI Done)
 - [ ] Internal Updates
