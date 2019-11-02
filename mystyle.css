@@ -115,3 +115,99 @@ h1
     padding: 0;
     font-weight: bold;
 }
+
+
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+
+.loginbox input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+.loginbox input[type="phonenumber"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+
+
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 1s ease 0s;
+}
+
+
+
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #056967;
+    color: white;
+}
+
+
+
+.loginbox option[type="select"]{
+    background-color: black;
+    color: white;
+}
+
+
+.loginbox select{
+    background-color: black;
+    color: white;
+}
+
+
+
+
+.loginbox a{
+    text-decoration: none;
+    color: 
+    font-size: 12px;
+    line-height: 20px;
+    color: #4d0d73;
+}
+
+
+
+.loginbox a:hover
+{
+    color: #002cde;
+}
+
+
+
+.loginbox .avatar{
+    position: absolute;
+    top: .5rem;
+    left: 8rem; 
+    height: 4rem;
+}
+
