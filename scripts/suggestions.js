@@ -52,189 +52,189 @@ window.addEventListener('load', ()=>{
 
 
 
-        var descriptions = [
-            "Its a clear sunny day. Weare a nice sunglass to ease your eyes.",
-            "Its not that hot. A full sleeve shirt will do the job.",
-            "A cotton made trouser will make you feel comfortable through the day.",
-            "Fashionable sneaker will make you comfortable also look good.",
-            "Too hot! A t-shirt is a must.",
-            "A pair of slipper will let your feet breathe.",
-            "Lots of clouds in the sky. Could be a rain shower happening soon. Don't forget your umbrella. Also you can wear a rain coat instead.",
-            "Its raining cats & dogs. A rain coat is a must.",
-            "Temperature can drop. A button shirt will keep you warm.",
-            "In this rainy day there is no alternate of a pair of boot."
-          ];
+    var descriptions = [
+        "Its a clear sunny day. Weare a nice sunglass to ease your eyes.",
+        "Its not that hot. A full sleeve shirt will do the job.",
+        "A cotton made trouser will make you feel comfortable through the day.",
+        "Fashionable sneaker will make you comfortable also look good.",
+        "Too hot! A t-shirt is a must.",
+        "A pair of slipper will let your feet breathe.",
+        "Lots of clouds in the sky. Could be a rain shower happening soon. Don't forget your umbrella. Also you can wear a rain coat instead.",
+        "Its raining cats & dogs. A raincoat is a must.",
+        "Temperature can drop. A button shirt will keep you warm.",
+        "In this rainy day there is no alternate of a pair of boot."
+      ];
 
 
 
 
 
 
-        function WeatherSuggestions(temp,icon){
-            if(icon.match(/clear-day/gi)){
-                if(temp <= 10){
+    function WeatherSuggestions(temp,icon){
+        if(icon.match(/clear-day/gi)){
+            if(temp <= 10){
 
-                }
-                if(temp > 10 && temp <= 15 ){
-                    
-                }
-                if(temp > 15 && temp <= 20 ){
-                    
-                }
-                if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("SUNGLASS","SHIRT","TROUSER","SNEAKER");
-                }
-                if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("SUNGLASS","T-SHIRT","TROUSER","SNEAKER");
-                }
-                if(temp > 30){
-                    giveSuggestions("SUNGLASS","T-SHIRT","TROUSER","SLIPPER");
-                }
             }
-            if(icon.match(/clear-night/gi)){
-                if(temp <= 10){
-
-                }
-                if(temp > 10 && temp <= 15 ){
-
-                }
-                if(temp > 15 && temp <= 20 ){
-
-                }
-                if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("RAINCOAT","SHIRT","TROUSER","SNEAKER");
-                }
-                if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("BLANK","T-SHIRT","TROUSER","SNEAKER");
-                }
-                if(temp > 30){
-                    giveSuggestions("BLANK","T-SHIRT","TROUSER","SLIPPER");
-                }
+            if(temp > 10 && temp <= 15 ){
+                
             }
-            if(icon.match(/rain/gi)){
-                if(temp <= 10){
-
-                }
-                if(temp > 10 && temp <= 15 ){
-
-                }
-                if(temp > 15 && temp <= 20 ){
-
-                }
-                if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
-                }
-                if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("RAINCOAT","T-SHIRT","TROUSER","BOOT");
-                }
-                if(temp > 30){
-                    giveSuggestions("RAINCOAT","T-SHIRT","TROUSER","BOOT");
-                }
+            if(temp > 15 && temp <= 20 ){
+                
             }
-            if(icon.match(/wind/gi)){
-                if(temp <= 10){
-
-                }
-                if(temp > 10 && temp <= 15 ){
-
-                }
-                if(temp > 15 && temp <= 20 ){
-
-                }
-                if(temp > 20 && temp <= 25 ){
-
-                }
-                if(temp > 25 && temp <= 30 ){
-
-                }
-                if(temp > 30){
-
-                }
+            if(temp > 20 && temp <= 25 ){
+                giveSuggestions("SUNGLASS","SHIRT","TROUSER","SNEAKER");
             }
-            if(icon.match(/fog/gi)){
-                if(temp <= 10){
-
-                }
-                if(temp > 10 && temp <= 15 ){
-
-                }
-                if(temp > 15 && temp <= 20 ){
-
-                }
-                if(temp > 20 && temp <= 25 ){
-
-                }
-                if(temp > 25 && temp <= 30 ){
-
-                }
-                if(temp > 30){
-
-                }
+            if(temp > 25 && temp <= 30 ){
+                giveSuggestions("SUNGLASS","T-SHIRT","TROUSER","SNEAKER");
             }
-            if(icon.match(/cloudy/gi)){
-                if(temp <= 10){
-
-                }
-                if(temp > 10 && temp <= 15 ){
-
-                }
-                if(temp > 15 && temp <= 20 ){
-
-                }
-                if(temp > 20 && temp <= 25 ){
-                    giveSuggestions("UMBRELLA","SHIRT","TROUSER","SNEAKER");
-                }
-                if(temp > 25 && temp <= 30 ){
-                    giveSuggestions("UMBRELLA","T-SHIRT","TROUSER","SNEAKER");
-                }
-                if(temp > 30){
-                    giveSuggestions("UMBRELLA","T-SHIRT","TROUSER","SLIPPER");
-                }
+            if(temp > 30){
+                giveSuggestions("SUNGLASS","T-SHIRT","TROUSER","SLIPPER");
             }
-            if(icon.match(/partly-cloudy-day/gi)){
-                if(temp <= 10){
+        }
+        if(icon.match(/clear-night/gi)){
+            if(temp <= 10){
 
-                }
-                if(temp > 10 && temp <= 15 ){
-
-                }
-                if(temp > 15 && temp <= 20 ){
-
-                }
-                if(temp > 20 && temp <= 25 ){
-
-                }
-                if(temp > 25 && temp <= 30 ){
-
-                }
-                if(temp > 30){
-
-                }
             }
-            if(icon.match(/partly-cloudy-night/gi)){
-                if(temp <= 10){
+            if(temp > 10 && temp <= 15 ){
 
-                }
-                if(temp > 10 && temp <= 15 ){
-
-                }
-                if(temp > 15 && temp <= 20 ){
-
-                }
-                if(temp > 20 && temp <= 25 ){
-
-                }
-                if(temp > 25 && temp <= 30 ){
-
-                }
-                if(temp > 30){
-
-                }
             }
+            if(temp > 15 && temp <= 20 ){
 
+            }
+            if(temp > 20 && temp <= 25 ){
+                giveSuggestions("BLANK","SHIRT","TROUSER","SNEAKER");
+            }
+            if(temp > 25 && temp <= 30 ){
+                giveSuggestions("BLANK","T-SHIRT","TROUSER","SNEAKER");
+            }
+            if(temp > 30){
+                giveSuggestions("BLANK","T-SHIRT","TROUSER","SLIPPER");
+            }
+        }
+        if(icon.match(/rain/gi)){
+            if(temp <= 10){
+
+            }
+            if(temp > 10 && temp <= 15 ){
+
+            }
+            if(temp > 15 && temp <= 20 ){
+
+            }
+            if(temp > 20 && temp <= 25 ){
+                giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
+            }
+            if(temp > 25 && temp <= 30 ){
+                giveSuggestions("RAINCOAT","T-SHIRT","TROUSER","BOOT");
+            }
+            if(temp > 30){
+                giveSuggestions("RAINCOAT","T-SHIRT","TROUSER","BOOT");
+            }
+        }
+        if(icon.match(/wind/gi)){
+            if(temp <= 10){
+
+            }
+            if(temp > 10 && temp <= 15 ){
+
+            }
+            if(temp > 15 && temp <= 20 ){
+
+            }
+            if(temp > 20 && temp <= 25 ){
+
+            }
+            if(temp > 25 && temp <= 30 ){
+
+            }
+            if(temp > 30){
+
+            }
+        }
+        if(icon.match(/fog/gi)){
+            if(temp <= 10){
+
+            }
+            if(temp > 10 && temp <= 15 ){
+
+            }
+            if(temp > 15 && temp <= 20 ){
+
+            }
+            if(temp > 20 && temp <= 25 ){
+
+            }
+            if(temp > 25 && temp <= 30 ){
+
+            }
+            if(temp > 30){
+
+            }
+        }
+        if(icon.match(/cloudy/gi)){
+            if(temp <= 10){
+
+            }
+            if(temp > 10 && temp <= 15 ){
+
+            }
+            if(temp > 15 && temp <= 20 ){
+
+            }
+            if(temp > 20 && temp <= 25 ){
+                giveSuggestions("UMBRELLA","SHIRT","TROUSER","SNEAKER");
+            }
+            if(temp > 25 && temp <= 30 ){
+                giveSuggestions("UMBRELLA","T-SHIRT","TROUSER","SNEAKER");
+            }
+            if(temp > 30){
+                giveSuggestions("UMBRELLA","T-SHIRT","TROUSER","SLIPPER");
+            }
+        }
+        if(icon.match(/partly-cloudy-day/gi)){
+            if(temp <= 10){
+
+            }
+            if(temp > 10 && temp <= 15 ){
+
+            }
+            if(temp > 15 && temp <= 20 ){
+
+            }
+            if(temp > 20 && temp <= 25 ){
+
+            }
+            if(temp > 25 && temp <= 30 ){
+
+            }
+            if(temp > 30){
+
+            }
+        }
+        if(icon.match(/partly-cloudy-night/gi)){
+            if(temp <= 10){
+
+            }
+            if(temp > 10 && temp <= 15 ){
+
+            }
+            if(temp > 15 && temp <= 20 ){
+
+            }
+            if(temp > 20 && temp <= 25 ){
+
+            }
+            if(temp > 25 && temp <= 30 ){
+
+            }
+            if(temp > 30){
+
+            }
         }
 
-    function giveSuggestions(acc,top,bottom,foot){
+    }
+
+        function giveSuggestions(acc,top,bottom,foot){
             dressNameAccessories.textContent = acc;
             dressNameAccessories2.textContent = acc;
             dressImgAccessories.src ="photos/clothes/"+acc+".png";
@@ -271,9 +271,8 @@ window.addEventListener('load', ()=>{
                     dressDescriptionFootwear.textContent = descriptions[i];
                 }
             }
-    }
+        }
 
-    }
 
     function giveSuggestions(acc,top,bottom,foot,des){
             dressNameAccessories.textContent = acc;
