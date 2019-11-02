@@ -106,15 +106,18 @@
 		
 		</div>
 
-
-		<label class="switch">
+		<div onclick="toggle()">
+		<label onclick="toggle()" class="switch">
 		    <h1>Male</h1>
 		    <h2>Female</h2>
-		  	<input type="checkbox">
-		  	<span class="slider"></span>
+		  	<input onclick="toggle()" type="checkbox">
+		  	<span onclick="toggle()" class="slider"></span>
 		</label>
+		</div>
 		
-		<div class="container-fluid">
+
+
+		<div id="suggestionDisplay" class="container-fluid">
 
 
 			<button class="catagorybutton" id="catagoryb1"> 
@@ -179,7 +182,27 @@
 				<img class="b4img" src="">
 			</button>	
 		</div>
+
+
+
+		<script>
+			var toggled = false;
+
+			function toggle(){
+			    if(!toggled){
+			        toggled = true;
+			        document.getElementById("suggestionDisplay").style.display = "none";
+			        return;
+			    }
+			    if(toggled){
+			        toggled = false;
+			        document.getElementById("suggestionDisplay").style.display = "block";
+			        return;
+			    }
+			}
+		</script>
 	</div>
+
 
 
     <!-- End -->
