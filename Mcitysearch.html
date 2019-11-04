@@ -23,8 +23,8 @@
 			<h1>Where are you headed today?</h1>
 			<h2 class="caption center-block">Dress for the weather.<br id="pad">Be prepared for <l>rain</l> or <l2>sunshine</l2>.</h2>
 			<div class="currentlocationbutton">
-	    		<a href="Mforecastpage.html"><button class="button5"><i class="fas fa-location-arrow"></i> Current Location</button></a>   
-	    			    		<select id="country" placeholder="Country">
+	    		<button onclick="CurrentLocation()" class="button5"><i class="fas fa-location-arrow"></i> Current Location</button>  
+	    		<select id="country" placeholder="Country">
 		    		<option value="bd">Bangladesh</option>
 		    	</select> 	
 	    	</div>
@@ -50,28 +50,21 @@
 		</div>
 
 		<div onclick="turnOverLayOff()" id="overlaywrapper">
-		<div id="overlay" onclick="turnOverLayOff()">
-			<div class="row">
-				<div class="col-6">
-					<h1 class="location-timezone2">place</h1>
-					<div class="temperature2">
-						<h4 class="temperature-degree2">0</h4>
+			<div id="overlay" onclick="turnOverLayOff()">
+				<h1 class="location-timezone2">place</h1>
+				<div class="temperature2">
+					<h4 class="temperature-degree2">0</h4>
 					<span>°F</span><h4>/</h4>
-						<h4 class="temperature-degree2c">0</h4>
+					<h4 class="temperature-degree2c">0</h4>
 					<span>°C</span>
-					</div>
-					<h5 id="time2" class="time">Date</h5>
 				</div>
-
-				<div class="col-6">
-					
-					<h3 class="temperature-hourly-description">Weather Description Hourly</h3>
-					<div class="weather-icon2">
-						<canvas class="icon2" width="128" height="128"></canvas>
-					</div>
+				<h5 id="time2" class="time">Date</h5>
+				
+				<h3 class="temperature-hourly-description">Weather Description Hourly</h3>
+				<div class="weather-icon2">
+					<canvas class="icon2" width="128" height="128"></canvas>
 				</div>
 			</div>
-		</div>
 		</div>
 
 
@@ -100,22 +93,114 @@
 
 
 		<div class="caption3s container-fluid">
-		<h1>My<br>Outfit<button id="closetbutton" class="closetbutton">Closet</button></h1>
+		<h1>My<br>Outfit<br><button id="closetbutton" class="closetbutton">New Outfit</button></h1>
 		
 		</div>
 
-		<div class="container-fluid">
-			<button class="catagorybutton" id="catagoryb1"><h1>ACCESSORIES</h1><h2 class="b1"></h2><img class="b1img" src=""></button>
-			<button class="catagorybutton" id="catagoryb2"><h1>TOP</h1><h2 class="b2">T-</h2><img class="b2img" src=""></button><br>
-			<button class="catagorybutton" id="catagoryb3"><h1>BOTTOM</h1><h2 class="b3"></h2><img class="b3img" src=""></button>
-			<button class="catagorybutton" id="catagoryb4"><h1>FOOTWEAR</h1><h2 class="b4"></h2><img class="b4img" src=""></button>	
+
+
+
+		<div class="toggleContainer">
+			<div class="togglebtn" onclick="this.classList.toggle('active'),toggle()">
+				<h1>Male</h1>
+				<h2>Female</h2>
+				<div class="innercircle"></div>				
+			</div>
+			
+		</div>
+
+		<div id="suggestionDisplay" class="container-fluid">
+
+
+			<button class="catagorybutton" id="catagoryb1"> 
+				<div class="details">
+	                
+	                <h1 class="b12"></h1>
+	                <p class="description1"></p>
+	                <a href="">Buy Now</a>
+
+            	</div>
+
+	        	<h1>ACCESSORIES</h1>
+	        	<h2 class="b1"></h2>
+	        	<img class="b1img" src="">
+            </button>
+
+
+			<button class="catagorybutton" id="catagoryb2">
+				<div class="details">
+
+	                <h1 class="b22"></h1>
+	                <p class="description2"></p>
+	                <a href="">Buy Now</a>
+
+            	</div>
+
+				<h1>TOP</h1>
+				<h2 class="b2"></h2>
+				<img class="b2img" src="">
+			</button>
+			
+
+			<br>
+			
+
+			<button class="catagorybutton" id="catagoryb3">
+				<div class="details">
+
+	                <h1 class="b32"></h1>
+	                <p class="description3"></p>
+	                <a href="">Buy Now</a>
+
+            	</div>
+
+				<h1>BOTTOM</h1>
+				<h2 class="b3"></h2>
+				<img class="b3img" src="">
+			</button>
+
+
+			<button class="catagorybutton" id="catagoryb4">
+				<div class="details">
+
+	                <h1 class="b42"></h1>
+	                <p class="description4"></p>
+	                <a href="">Buy Now</a>
+
+            	</div>
+
+				<h1>FOOTWEAR</h1>
+				<h2 class="b4"></h2>
+				<img class="b4img" src="">
+			</button>	
 		</div>
 	</div>
 
 
+		<script>
+			var toggled = false;
+
+			function toggle(){
+			    if(!toggled){
+			        toggled = true;
+			        document.getElementById("suggestionDisplay").style.display = "none";
+			        return;
+			    }
+			    if(toggled){
+			        toggled = false;
+			        document.getElementById("suggestionDisplay").style.display = "block";
+			        return;
+			    }
+			}
+		</script>
+	</div>
+
+
+
     <!-- End -->
 	<!--- scripts -->
-	<script src="scripts/citysearch.js"></script>
+	<script src="scripts/dressSuggestions.js"></script>
+	<script src="scripts/weatherForecast.js"></script>
 	<script src="scripts/skycons.js"></script>
 	<script src="scripts/popup.js"></script>
 	<script src="scripts/kit.js"></script>
