@@ -247,4 +247,3 @@ let dressDescriptionFootwear = document.querySelector(".description4");
                 }
             }
         }
-
