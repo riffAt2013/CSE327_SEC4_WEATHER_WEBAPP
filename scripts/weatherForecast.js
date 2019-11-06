@@ -2,21 +2,49 @@ const searchElement = document.querySelector('[data-city-search]');
 const forecastovrlay = document.querySelector(".forcastoverlay");
 const citysrcovrlay = document.querySelector(".citysrc");
 
+const notificationElement = document.querySelector(".notification");
+const notificationReload = document.querySelector(".reload");
+const notificationBG = document.querySelector(".noti");
+const notificationWrap = document.querySelector(".overlaywrapper2");
 
+document.getElementById("CurrentLocation").addEventListener("click", CurrentLocation);
 
 function CurrentLocation(){
+    if('geolocation' in navigator){
+        navigator.geolocation.getCurrentPosition(setPosition, showError);
+    }else{
+        notificationElement.style.display = "block";
+        notificationElement.innerHTML = "<p>Browser doesn't Support Geolocation</p>";
+    }
     currentLocation = true;
     forecastovrlay.style.display = 'block';
     citysrcovrlay.style.display = 'none';
-    if(navigator.geolocation){
-		navigator.geolocation.getCurrentPosition(position =>{
-			long = position.coords.longitude;
-			lat= position.coords.latitude;
-            searchWeatherStat(long,lat,1);
-            hourlyWeather(long,lat);
-       })
-    }
 }
+
+
+function setPosition(position){
+    long = position.coords.longitude;
+    lat= position.coords.latitude;
+    searchWeatherStat(long,lat,1);
+    hourlyWeather(long,lat);
+}
+
+function showError(error){
+    notificationElement.style.display = "block";
+    notificationReload.style.display = "block";
+    notificationBG.style.display = "block";
+    notificationWrap.style.display = "block";
+    notificationElement.innerHTML = `<p> ${error.message} </p>`;
+}
+
+
+document.getElementById("reloadOn").addEventListener("click", ()=>{
+    notificationBG.style.display = "none";
+    notificationWrap.style.display = "none";
+    CurrentLocation();
+})
+
+
 
 document.getElementById('searchButton').addEventListener('click', () =>{
     let searchTerm = document.getElementById('searchInput').value;
@@ -46,7 +74,12 @@ document.getElementById('searchInput').addEventListener('keyup', (e) =>{
     }
 })
 
-
+document.getElementById('turnOverLayOn').addEventListener('click', () =>{
+    document.getElementById('overlaywrapper').style.display = 'flex';
+  })
+  document.getElementById('overlaywrapper').addEventListener('click', () =>{
+    document.getElementById('overlaywrapper').style.display = 'none';
+  })
 
 function searchWeather(searchTerm,countryTerm){
     searchTerm1 = searchTerm+","+countryTerm;
