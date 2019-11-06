@@ -23,7 +23,7 @@
 			<h1>Where are you headed today?</h1>
 			<h2 class="caption center-block">Dress for the weather.<br id="pad">Be prepared for <l>rain</l> or <l2>sunshine</l2>.</h2>
 			<div class="currentlocationbutton">
-	    		<button onclick="CurrentLocation()" class="button5"><i class="fas fa-location-arrow"></i> Current Location</button> 
+	    		<button id="CurrentLocation" class="button5"><i class="fas fa-location-arrow"></i> Current Location</button> 
 	    			    		<select id="country" placeholder="Country">
 		    		<option value="bd">Bangladesh</option>
 		    	</select> 	
@@ -45,12 +45,12 @@
 		<div class="overlaywrapper2 container-fluid">
 			<div class="noti">
 		 		<div class="notification">Notification</div>
-		 		<button class="reload" onclick="reloadOn()">Reload</button>
+		 		<button class="reload" id="reloadOn">Reload</button>
 		 	</div>
 		</div>
 
-		<div onclick="turnOverLayOff()" id="overlaywrapper">
-		<div id="overlay" onclick="turnOverLayOff()">
+		<div id="overlaywrapper">
+		<div id="overlay">
 			<div class="row">
 				<div class="col-6">
 					<h1 class="location-timezone2"></h1>
@@ -78,7 +78,7 @@
 
 
 
-		<div onclick="turnOverLayOn()" class="caption3 container-fluid">
+		<div id="turnOverLayOn" class="caption3 container-fluid">
 			<div class="weather-icon">
 				<canvas class="icon" width="128" height="128"></canvas>
 			</div>
@@ -106,13 +106,13 @@
 		
 		</div>
 
-		<div onclick="toggle()">
-		<label onclick="toggle()" class="switch">
-		    <h1>Male</h1>
-		    <h2>Female</h2>
-		  	<input onclick="toggle()" type="checkbox">
-		  	<span onclick="toggle()" class="slider"></span>
-		</label>
+		<div class="toggleContainer">
+			<div class="togglebtn" onclick="this.classList.toggle('active'),toggle()">
+				<h1>Male</h1>
+				<h2>Female</h2>
+				<div class="innercircle"></div>				
+			</div>
+			
 		</div>
 		
 
@@ -210,7 +210,6 @@
 	<script src="scripts/dressSuggestions.js"></script>
 	<script src="scripts/weatherForecast.js"></script>
 	<script src="scripts/skycons.js"></script>
-	<script src="scripts/popup.js"></script>
 	<script src="scripts/kit.js"></script>
 </body>
 </html>
