@@ -13,7 +13,22 @@ WeatherCloset is a webapp built with python flask and basic web functionality fo
 
 ## Installation
 
-TBW
+(( project members only ))
+(( will be updated for next stage))
+(( ensure python3))
+
+Install the dependencies
+```
+pip install flask
+pip install requests
+```
+Clone the repo or `git pull origin master` it then `cd` if necessary
+```
+python controller.py
+```
+
+then navigate to `https://localhost:5000` to check the website
+
 
 ## Checklist
 
