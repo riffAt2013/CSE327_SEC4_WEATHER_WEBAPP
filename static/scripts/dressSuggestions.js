@@ -15,6 +15,7 @@ let dressDescriptionTop = document.querySelector(".description2");
 let dressDescriptionBottom = document.querySelector(".description3");
 let dressDescriptionFootwear = document.querySelector(".description4");
 
+
     var descriptionsMale = [
         "Its a clear sunny day. Weare a nice sunglass to ease your eyes.",
         "Its not that hot. A full sleeve shirt will do the job.",
@@ -212,7 +213,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
     function giveSuggestions(acc,top,bottom,foot){
             dressNameAccessories.textContent = acc;
             dressNameAccessories2.textContent = acc;
-            dressImgAccessories.src ="photos/clothes/"+acc+".png";
+            dressImgAccessories.src ="static/photos/clothes/"+acc+".png";
             for(var i = 0 ;i<descriptionsMale.length;i++){
                 acc = acc.toLowerCase();                    
                 if(descriptionsMale[i].includes(acc)){
@@ -221,7 +222,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
             }
             dressNameTop.textContent = top;
             dressNameTop2.textContent = top;
-            dressImgTop.src ="photos/clothes/"+top+".png";
+            dressImgTop.src ="static/photos/clothes/"+top+".png";
             for(var i = 0 ;i<descriptionsMale.length;i++){
                 top = top.toLowerCase();                    
                 if(descriptionsMale[i].includes(top)){
@@ -230,7 +231,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
             }
             dressNameBottom.textContent = bottom;
             dressNameBottom2.textContent = bottom;
-            dressImgBottom.src ="photos/clothes/"+bottom+".png";
+            dressImgBottom.src ="static/photos/clothes/"+bottom+".png";
             for(var i = 0 ;i<descriptionsMale.length;i++){
                 bottom = bottom.toLowerCase();                    
                 if(descriptionsMale[i].includes(bottom)){
@@ -239,7 +240,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
             }
             dressNameFootwear.textContent = foot;
             dressNameFootwear2.textContent = foot;
-            dressImgFootwear.src ="photos/clothes/"+foot+".png";
+            dressImgFootwear.src ="static/photos/clothes/"+foot+".png";
             for(var i = 0 ;i<descriptionsMale.length;i++){
                 foot = foot.toLowerCase();                    
                 if(descriptionsMale[i].includes(foot)){
