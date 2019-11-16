@@ -4,15 +4,24 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
 	<link rel="shortcut icon" href="photos/favicon.ico" />
 	<title>City Search</title>
 	<link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="static/style.css">
+=======
+	<link rel="shortcut icon" href="../static/photos/favicon.ico" />
+	<title>City Search</title>
+	<link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css">
+	<link rel="stylesheet" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+>>>>>>> origin/FrontEnds
 
 </head>
 <body>
 
+<<<<<<< HEAD
 	<div>
 		<a class="returnlogo" href="{{url_for('index')}}"><button class="button3"><img src="static/photos/logo.png"></button></a>
 		<button class="button4"><i class="fas fa-arrow-left"></i> Main Menu</button>
@@ -31,11 +40,209 @@
     	<a href=""><button type="submit" class="Searchbutton1">Search</button></a>
     </div>
     </div>
+=======
+	<div class="citysrc">
+		<div>
+			<a class="returnlogo" href="index.html"><button class="button3"><img src="../static/photos/logo.png"></button></a>
+			<button class="button4"><i class="fas fa-arrow-left"></i> Main Menu</button>
+		</div>
+		<div class="caption2">
+			
+			<h1>Where are you headed today?</h1>
+			<h2 class="caption center-block">Dress for the weather.<br id="pad">Be prepared for <l>rain</l> or <l2>sunshine</l2>.</h2>
+			<div class="currentlocationbutton">
+	    		<button id="CurrentLocation" class="button5"><i class="fas fa-location-arrow"></i> Current Location</button> 
+	    			    		<select id="country" placeholder="Country">
+		    		<option value="bd">Bangladesh</option>
+		    	</select> 	
+	    	</div>
+
+		
+
+			<div class="row mb-5">
+		    	<input id="searchInput" class="searchbox" id="exampleFormControlInput5" type="email" placeholder=" City/Place" class="form-control form-control-underlined">
+
+		   		<button id="searchButton" type="submit" class="Searchbutton1">Search</button>
+		    </div>
+	    </div>
+	</div>
+
+
+	<div class="forcastoverlay">
+		<a href="index.html"><button class="button8"><i class="fas fa-arrow-left"></i> Main Menu</button></a>
+		<div class="overlaywrapper2 container-fluid">
+			<div class="noti">
+		 		<div class="notification">Notification</div>
+		 		<button class="reload" id="reloadOn">Reload</button>
+		 	</div>
+		</div>
+
+		<div id="overlaywrapper">
+		<div id="overlay">
+			<div class="row">
+				<div class="col-6">
+					<h1 class="location-timezone2"></h1>
+					<div class="temperature2">
+						<h4 class="temperature-degree2">0</h4>
+					<span>°F</span><h4>/</h4>
+						<h4 class="temperature-degree2c">0</h4>
+					<span>°C</span>
+					</div>
+					<h2 class="temperature-description2">Weather Description</h2>
+					<h5 id="time2" class="time">Date</h5>
+
+				</div>
+
+				<div class="col-6">
+					
+					<h3 class="temperature-hourly-description">Weather Description Hourly</h3>
+					<div class="weather-icon2">
+						<canvas class="icon2" width="128" height="128"></canvas>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+
+
+
+		<div id="turnOverLayOn" class="caption3 container-fluid">
+			<div class="weather-icon">
+				<canvas class="icon" width="128" height="128"></canvas>
+			</div>
+			<div class="row">
+				<div class="col-6">
+					<h1 class="location-timezone">Place</h1>
+				</div>
+				<div class="col-6">
+					<h3 id="time" class="time">Date</h3>
+					<h2 class="temperature-description">Weather Description</h2>
+				</div>
+			</div>
+		</div>
+		
+		<a href="citysearch.html"><button class="changecitybutton"><i class="fas fa-arrow-left"></i>Change City</button></a>
+
+		<div class="temperature">
+				<h1 class="temperature-degree">27</h1>
+				<span>°C</span>
+		</div>
+
+
+		<div class="caption3s container-fluid">
+		<h1>My<br>Outfit<button class="closetbutton">New Outfit</button></h1>
+		
+		</div>
+
+		<div class="toggleContainer">
+			<div class="togglebtn" onclick="this.classList.toggle('active'),toggle()">
+				<h1>Male</h1>
+				<h2>Female</h2>
+				<div class="innercircle"></div>				
+			</div>
+			
+		</div>
+		
+
+
+		<div id="suggestionDisplay" class="container-fluid">
+
+
+			<button class="catagorybutton" id="catagoryb1"> 
+				<div class="details">
+	                
+	                <h1 class="b12"></h1>
+	                <p class="description1"></p>
+	                <a href="">Buy Now</a>
+
+            	</div>
+
+	        	<h1>ACCESSORIES</h1>
+	        	<h2 class="b1"></h2>
+	        	<img class="b1img" src="">
+            </button>
+
+
+			<button class="catagorybutton" id="catagoryb2">
+				<div class="details">
+
+	                <h1 class="b22"></h1>
+	                <p class="description2"></p>
+	                <a href="">Buy Now</a>
+
+            	</div>
+
+				<h1>TOP</h1>
+				<h2 class="b2"></h2>
+				<img class="b2img" src="">
+			</button>
+			
+
+			<br>
+			
+
+			<button class="catagorybutton" id="catagoryb3">
+				<div class="details">
+
+	                <h1 class="b32"></h1>
+	                <p class="description3"></p>
+	                <a href="">Buy Now</a>
+
+            	</div>
+
+				<h1>BOTTOM</h1>
+				<h2 class="b3"></h2>
+				<img class="b3img" src="">
+			</button>
+
+
+			<button class="catagorybutton" id="catagoryb4">
+				<div class="details">
+
+	                <h1 class="b42"></h1>
+	                <p class="description4"></p>
+	                <a href="">Buy Now</a>
+
+            	</div>
+
+				<h1>FOOTWEAR</h1>
+				<h2 class="b4"></h2>
+				<img class="b4img" src="">
+			</button>	
+		</div>
+
+
+
+		<script>
+			var toggled = false;
+
+			function toggle(){
+			    if(!toggled){
+			        toggled = true;
+			        document.getElementById("suggestionDisplay").style.display = "none";
+			        return;
+			    }
+			    if(toggled){
+			        toggled = false;
+			        document.getElementById("suggestionDisplay").style.display = "block";
+			        return;
+			    }
+			}
+		</script>
+	</div>
+>>>>>>> origin/FrontEnds
 
 
 
     <!-- End -->
 	<!--- scripts -->
+<<<<<<< HEAD
 	<script src="scripts/kit.js"></script>
+=======
+	<script src="../static/scripts/dressSuggestions.js"></script>
+	<script src="../static/scripts/weatherForecast.js"></script>
+	<script src="../static/scripts/skycons.js"></script>
+	<script src="../static/scripts/kit.js"></script>
+>>>>>>> origin/FrontEnds
 </body>
 </html>
