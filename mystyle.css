@@ -1,6 +1,6 @@
 body
 {
-	position: fixed;
+    position: fix;
     background: linear-gradient(to bottom, #3E80FE, #12b08e);
     background-size: 400% 400%;
     height: 100%;
