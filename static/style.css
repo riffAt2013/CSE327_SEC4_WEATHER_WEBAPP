@@ -1035,7 +1035,7 @@ img.portfolio{
 
 #loginform{
     position: fixed;
-    background: linear-gradient(to bottom, #00b7ff, #03dffc);
+    background: linear-gradient(to bottom, #2283aa, #3c73bb);
     background-size: 400% 400%;
     height: 100%;
     width: 100%;
@@ -1044,7 +1044,7 @@ img.portfolio{
 .loginbox{
     position: relative;
     width: 320px;
-    height: 460px;
+    height: 550px;
     top: 47%;
     left: 50%;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
