@@ -21,6 +21,9 @@ Install the dependencies
 ```
 pip install flask
 pip install requests
+pip install WTForms
+pip install Flask-Bootstrap
+pip install Flask-WTF
 ```
 Clone the repo or `git pull origin master` it then `cd` if necessary
 ```
