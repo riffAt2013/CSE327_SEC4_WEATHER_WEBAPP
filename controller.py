@@ -3,17 +3,28 @@ from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm 
 from wtforms import StringField, PasswordField, BooleanField
 from wtforms.validators import InputRequired, Email, Length 
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "HELLONEARTH"
-bootstrap = Bootstrap(app)
+app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///C:\Users\RIFAT\Desktop\CSE327_SEC4_WEATHER_WEBAPP\database.db'
+Bootstrap(app)
+database = SQLAlchemy(app)
+
+
+class User(database.Model):
+    uid = database.Column(database.Integer, primary_key = True)
+    username = database.Column(database.String(15), unique = True)
+    email = database.Column(database.String(50), unique = True)
+    password = database.Column(database.String(80))
 
 class LoginForm(FlaskForm):
     username = StringField('', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('', validators=[InputRequired(), Length(min=8, max=80)])
     
 class RegisterForm(FlaskForm):
-    email = StringField('', validators=[InputRequired(), Email(message='Invalid email'), Length(max=50)])
+    email = StringField('', validators=[InputRequired(), Email(message='Invalid Email'), Length(max=50)])
     username = StringField('', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('', validators=[InputRequired(), Length(min=8, max=80)])
 
@@ -30,7 +41,8 @@ def signup():
     form = RegisterForm()
 
     if form.validate_on_submit():
-       return '<h1>' + form.username.data + ' ' + form.password.data + ' '+ form.email.data +'</h1>'
+        new_user = User(username = form.username.data, email = form.email.data, password = form.password.data)
+        
 
     return render_template("signup.html", form = form)
 
