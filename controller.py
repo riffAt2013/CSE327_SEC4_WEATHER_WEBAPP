@@ -2,23 +2,31 @@ from flask import Flask, render_template, redirect, url_for
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm 
 from wtforms import StringField, PasswordField, BooleanField
-from wtforms.validators import InputRequired, Email, Length 
+from wtforms.validators import InputRequired, Email, Length
+# for database connection over SQLite3
 from flask_sqlalchemy import SQLAlchemy
+# for encryption features
 from werkzeug.security import generate_password_hash, check_password_hash
+from config import Config
+
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = "HELLONEARTH"
-app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///C:\Users\RIFAT\Desktop\CSE327_SEC4_WEATHER_WEBAPP\database.db'
+app.config.from_object(Config)
+# app.config['SECRET_KEY'] = "HELLONEARTH"
+# app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///C:\Users\RIFAT\Desktop\CSE327_SEC4_WEATHER_WEBAPP\database.db'
+# bootstrap initialization for forms __ might delete it later
 Bootstrap(app)
+# database initialization
 database = SQLAlchemy(app)
 
-
+# more columns needed
 class User(database.Model):
     uid = database.Column(database.Integer, primary_key = True)
     username = database.Column(database.String(15), unique = True)
     email = database.Column(database.String(50), unique = True)
     password = database.Column(database.String(80))
 
+    # representaion method for debugging querys
     def __repr__(self):
         return f'{self.uid} {self.username}'
 
@@ -48,6 +56,7 @@ def signup():
         new_user = User(username = form.username.data, email = form.email.data, password = hashed_pass)
         database.session.add(new_user)
         database.session.commit()
+        # something else maybe
         return '<h1>New User Has Been Created</h1>'
     return render_template("signup.html", form = form)
 
