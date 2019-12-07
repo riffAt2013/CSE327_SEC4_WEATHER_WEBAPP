@@ -15,8 +15,8 @@
 
 	<div class="citysrc">
 		<div>
-			<a class="returnlogo" href="index.html"><button class="button3"><img src="../static/photos/logo.png"></button></a>
-			<button class="button4"><i class="fas fa-arrow-left"></i> Main Menu</button>
+			<a class="returnlogo" href="{{ url_for('index') }}"><button class="button3"><img src="../static/photos/logo.png"></button></a>
+			<button class="button4"><i class="fas fa-arrow-left"></i> Logout</button>
 		</div>
 		<div class="caption2">
 			
@@ -41,7 +41,7 @@
 
 
 	<div class="forcastoverlay">
-		<a href="index.html"><button class="button8"><i class="fas fa-arrow-left"></i> Main Menu</button></a>
+		<a href="{{ url_for('logout') }}"><button class="button8"><i class="fas fa-arrow-left"></i> Logout</button></a>
 		<div class="overlaywrapper2 container-fluid">
 			<div class="noti">
 		 		<div class="notification">Notification</div>
