@@ -12,6 +12,9 @@ from flask_admin import Admin, AdminIndexView
 from flask_admin.contrib.sqla import ModelView
 # for the login and log-out
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user, current_user
+from flask_dance.contrib.facebook import make_facebook_blueprint, facebook
+from flask_dance.contrib.google import make_google_blueprint, google
+from flask_dance.contrib.github import make_github_blueprint, github
 from config import Config
 
 app = Flask(__name__)
@@ -27,7 +30,15 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
+google_blueprint = make_google_blueprint(client_id='447064919877-uedetdphik6lpi7the2q9a2giusnql8b.apps.googleusercontent.com', client_secret='4ZOonc_edC3DORUtusDA8OZH')
+app.register_blueprint(google_blueprint, url_prefix = '/goo_login')
 
+github_blueprint = make_github_blueprint(client_id='81ced90e1bde7caca0fd', client_secret='94d3f2f46fe3e37a80f3a22add93f39974ef236c')
+app.register_blueprint(github_blueprint, url_prefix = '/git_login')
+
+
+facebook_blueprint = make_facebook_blueprint(client_id='2416104115296423', client_secret='599d3d90bd2a5b9dfa19a219a418dc76')
+app.register_blueprint(facebook_blueprint, url_prefix='/face_login')
 
 
 # more columns needed
@@ -100,6 +111,32 @@ def login():
         return '<h1>Invalid User or pass</h1>'
 
     return render_template('loginform.html', form = form)
+    
+
+@app.route('/google')
+def google_login():
+    if not google.authorized:
+        return redirect(url_for('google.login'))
+    acc_info = google.get("/oauth2/v1/userinfo")
+    if acc_info.ok:
+        acc_json = acc_info.json()
+
+        return '<h1>Your google is {}</h1>'.format(acc_json['name'])
+    return "<h1> SHIIT !</h1>"
+
+
+
+@app.route('/facebook')
+def face_login():
+    if not facebook.authorized:
+        return redirect(url_for('facebook.login'))
+    acc_info = facebook.get("/me")
+    if acc_info.ok:
+        acc_json = acc_info.json()
+        return '<h1>Your facebook id is {}</h1>'.format(acc_json['name'])
+
+    return "<h1> SHIIT !</h1>"
+
 
 @app.route('/logout')
 @login_required
