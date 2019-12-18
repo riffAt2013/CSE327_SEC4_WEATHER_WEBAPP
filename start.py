@@ -8,7 +8,7 @@ from flask_sqlalchemy import SQLAlchemy
 # for encryption features
 from werkzeug.security import generate_password_hash, check_password_hash
 # for the admin panel
-from flask_admin import Admin
+from flask_admin import Admin, AdminIndexView
 from flask_admin.contrib.sqla import ModelView
 # for the login and log-out
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user, current_user
@@ -22,7 +22,7 @@ app.config.from_object(Config)
 bootstrap = Bootstrap(app)
 # database initialization
 database = SQLAlchemy(app)
-admin = Admin(app)
+
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
@@ -43,6 +43,11 @@ class User(UserMixin, database.Model):
     def __repr__(self):
         return f'{self.uid} {self.username}'
 
+class OverWrittenIndexView(AdminIndexView):
+    def is_accessible(self):
+        return current_user.is_authenticated
+
+admin = Admin(app, name="Hi Admin!", index_view=OverWrittenIndexView())
 admin.add_view(ModelView(User, database.session))
 
 @login_manager.user_loader
@@ -101,6 +106,8 @@ def login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
+
+
 
 
 # @app.route('/citysearch')
