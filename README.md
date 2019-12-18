@@ -38,12 +38,12 @@ then navigate to `https://localhost:5000` to check the website
 
 - [ ] SRS
 - [ ] SDS?
-- [ ] Project Proposal Upload
+- [x] Project Proposal Upload
 - [x] Use of GIT
 - [x] Utilization of Popular framework (done by flask)
 - [ ] Use of Artificial Intelligence
-- [ ] Use of Federated Identity provider
-- [ ] Source Code Comments
+- [x] Use of Federated Identity provider
+- [x] Source Code Comments
 - [ ] Unit Testing
 - [x] UI Design
 - [x] Cross Platform Implementation (UI Done)
