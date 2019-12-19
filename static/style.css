@@ -1225,13 +1225,12 @@ img.portfolio{
 
 
 /*--- Market Place--*/
-#website{
-    display: none;
-}
-#websitechoice{
+
+.websitechoice{
     display: visible;
 }
 .marketplace{
+    display: none;
     position: absolute;
     border: none;
     left: 1vw;
