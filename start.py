@@ -56,14 +56,14 @@ class User(UserMixin, database.Model):
     def __repr__(self):
         return f'{self.uid} {self.username}'
 
-# for the admin panel
-admin = Admin(app, name="Hi Admin!", index_view=OverWrittenIndexView())
-admin.add_view(ModelView(User, database.session))
-
 # oveerwriting admin index view so that not anyone can log-in
 class OverWrittenIndexView(AdminIndexView):
     def is_accessible(self):
         return current_user.is_authenticated
+
+# for the admin panel
+admin = Admin(app, name="Hi Admin!", index_view=OverWrittenIndexView())
+admin.add_view(ModelView(User, database.session))
 
 
 
