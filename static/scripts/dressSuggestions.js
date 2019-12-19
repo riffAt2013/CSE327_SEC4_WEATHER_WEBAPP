@@ -17,6 +17,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
 
 
     var descriptionsMale = [
+        "Its a less than 15 degree outside. Don't forget your jacket.",
         "Its a clear sunny day. Weare a nice sunglass to ease your eyes.",
         "Its not that hot. A full sleeve shirt will do the job.",
         "A cotton made trouser will make you feel comfortable through the day.",
@@ -34,6 +35,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
       ];
       
       var descriptionsFemale = [
+        "Its a less than 15 degree outside. Don't forget your jacket.",
         "Its a clear sunny day. Weare a nice sunglass to ease your eyes.",
         "Its not that hot. A full sleeve shirt will do the job.",
         "A cotton made trouser will make you feel comfortable through the day.",
@@ -80,7 +82,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
 
             }
             if(temp > 10 && temp <= 15 ){
-
+                giveSuggestions("CAP","JACKET","JEANS","SNEAKER"); 
             }
             if(temp > 15 && temp <= 20 ){
 
