@@ -26,7 +26,11 @@ let dressDescriptionFootwear = document.querySelector(".description4");
         "Lots of clouds in the sky. Could be a rain shower happening soon. Don't forget your umbrella. Also you can wear a rain coat instead.",
         "Its raining cats & dogs. A raincoat is a must.",
         "Temperature can drop. A button shirt will keep you warm.",
-        "In this rainy day there is no alternate of a pair of boot."
+        "In this rainy day there is no alternate of a pair of boot.",
+        "Its cold out there. A good jeans will keep you warm.",
+        "A well made hoody will keep your body and ear warm.",
+        "A thermal cap will keep your ear warm."
+
       ];
       
       var descriptionsFemale = [
@@ -39,7 +43,11 @@ let dressDescriptionFootwear = document.querySelector(".description4");
         "Lots of clouds in the sky. Could be a rain shower happening soon. Don't forget your umbrella. Also you can wear a rain coat instead.",
         "Its raining cats & dogs. A raincoat is a must.",
         "Temperature can drop. A button shirt will keep you warm.",
-        "In this rainy day there is no alternate of a pair of boot."
+        "In this rainy day there is no alternate of a pair of boot.",
+        "Its cold out there.A good jeans will keep you warm.",
+        "A well made hoody will keep your body and ear warm.",
+        "A thermal cap will keep your ear warm."
+        
       ];
 
 
@@ -52,10 +60,10 @@ let dressDescriptionFootwear = document.querySelector(".description4");
 
             }
             if(temp > 10 && temp <= 15 ){
-                
+                giveSuggestions("BLANK","HOODY","JEANS","SNEAKER"); 
             }
             if(temp > 15 && temp <= 20 ){
-                
+               giveSuggestions("CAP","HOODY","JEANS","SNEAKER"); 
             }
             if(temp > 20 && temp <= 25 ){
                 giveSuggestions("SUNGLASS","SHIRT","TROUSER","SNEAKER");
@@ -195,7 +203,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
 
             }
             if(temp > 15 && temp <= 20 ){
-
+                giveSuggestions("CAP","HOODY","JEANS","SNEAKER"); 
             }
             if(temp > 20 && temp <= 25 ){
 
@@ -213,7 +221,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
     function giveSuggestions(acc,top,bottom,foot){
             dressNameAccessories.textContent = acc;
             dressNameAccessories2.textContent = acc;
-            dressImgAccessories.src ="static/photos/clothes/"+acc+".png";
+            dressImgAccessories.src ="../static/photos/clothes/"+acc+".png";
             for(var i = 0 ;i<descriptionsMale.length;i++){
                 acc = acc.toLowerCase();                    
                 if(descriptionsMale[i].includes(acc)){
@@ -222,7 +230,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
             }
             dressNameTop.textContent = top;
             dressNameTop2.textContent = top;
-            dressImgTop.src ="static/photos/clothes/"+top+".png";
+            dressImgTop.src ="../static/photos/clothes/"+top+".png";
             for(var i = 0 ;i<descriptionsMale.length;i++){
                 top = top.toLowerCase();                    
                 if(descriptionsMale[i].includes(top)){
@@ -231,7 +239,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
             }
             dressNameBottom.textContent = bottom;
             dressNameBottom2.textContent = bottom;
-            dressImgBottom.src ="static/photos/clothes/"+bottom+".png";
+            dressImgBottom.src ="../static/photos/clothes/"+bottom+".png";
             for(var i = 0 ;i<descriptionsMale.length;i++){
                 bottom = bottom.toLowerCase();                    
                 if(descriptionsMale[i].includes(bottom)){
@@ -240,7 +248,7 @@ let dressDescriptionFootwear = document.querySelector(".description4");
             }
             dressNameFootwear.textContent = foot;
             dressNameFootwear2.textContent = foot;
-            dressImgFootwear.src ="static/photos/clothes/"+foot+".png";
+            dressImgFootwear.src ="../static/photos/clothes/"+foot+".png";
             for(var i = 0 ;i<descriptionsMale.length;i++){
                 foot = foot.toLowerCase();                    
                 if(descriptionsMale[i].includes(foot)){
