@@ -14,34 +14,36 @@ from flask_admin.contrib.sqla import ModelView
 from flask_login import LoginManager, UserMixin, login_required, login_user, logout_user, current_user
 from flask_dance.contrib.facebook import make_facebook_blueprint, facebook
 from flask_dance.contrib.google import make_google_blueprint, google
-from flask_dance.contrib.github import make_github_blueprint, github
-from config import Config
+from flask_dance.consumer.storage.sqla import OAuthConsumerMixin, SQLAlchemyStorage
+from flask_dance.consumer import oauth_authorized
+from sqlalchemy.orm.exc import NoResultFound
 
 app = Flask(__name__)
-# separate config init
-app.config.from_object(Config)
+
+app.config['SECRET_KEY'] = "HELLONEARTH"
+app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///C:\Users\RIFAT\Desktop\CSE327_SEC4_WEATHER_WEBAPP\database.db'
+app.config['OAUTHLIB_INSECURE_TRANSPORT'] = 1
 
 # bootstrap initialization for forms __ might delete it later
 bootstrap = Bootstrap(app)
 # database initialization
 database = SQLAlchemy(app)
 
+# for login purpose
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
-google_blueprint = make_google_blueprint(client_id='447064919877-uedetdphik6lpi7the2q9a2giusnql8b.apps.googleusercontent.com', client_secret='4ZOonc_edC3DORUtusDA8OZH')
-app.register_blueprint(google_blueprint, url_prefix = '/goo_login')
 
-github_blueprint = make_github_blueprint(client_id='81ced90e1bde7caca0fd', client_secret='94d3f2f46fe3e37a80f3a22add93f39974ef236c')
-app.register_blueprint(github_blueprint, url_prefix = '/git_login')
-
+# oauth purpose, flask-dance abstracts the oauth workflow by creating 
+# a blueprint
+google_blueprint = make_google_blueprint(client_id='447064919877-0dpjllbe730nl92fq91al64s3sn382v0.apps.googleusercontent.com', client_secret='rsSjE8FBmRSLn1swjggZmVZG')
+app.register_blueprint(google_blueprint, url_prefix = '/goo_login', offline=True)
 
 facebook_blueprint = make_facebook_blueprint(client_id='2416104115296423', client_secret='599d3d90bd2a5b9dfa19a219a418dc76')
 app.register_blueprint(facebook_blueprint, url_prefix='/face_login')
+    
 
-
-# more columns needed
 class User(UserMixin, database.Model):
     uid = database.Column(database.Integer, primary_key = True)
     username = database.Column(database.String(15), unique = True)
@@ -54,17 +56,34 @@ class User(UserMixin, database.Model):
     def __repr__(self):
         return f'{self.uid} {self.username}'
 
+# for the admin panel
+admin = Admin(app, name="Hi Admin!", index_view=OverWrittenIndexView())
+admin.add_view(ModelView(User, database.session))
+
+# oveerwriting admin index view so that not anyone can log-in
 class OverWrittenIndexView(AdminIndexView):
     def is_accessible(self):
         return current_user.is_authenticated
 
-admin = Admin(app, name="Hi Admin!", index_view=OverWrittenIndexView())
-admin.add_view(ModelView(User, database.session))
 
+
+# creates flask_dance_oauth table by iteself, we created a relashionship with 
+# user class using uid as a foreignkey
+class OAuth(OAuthConsumerMixin, database.Model):
+    user_id = database.Column(database.Integer, database.ForeignKey(User.uid))
+    user = database.relationship(User)
+
+# storage for all the oauth response users
+google_blueprint.storage = SQLAlchemyStorage(OAuth, database.session, user=current_user, user_required=False)
+facebook_blueprint.storage = SQLAlchemyStorage(OAuth, database.session, user=current_user, user_required=False)
+
+
+# login manager workflow simplified by flask-login
 @login_manager.user_loader
 def load_user(user_id):
     return User.query.get(int(user_id))
 
+# webform classes
 class LoginForm(FlaskForm):
     username = StringField('', validators=[InputRequired(), Length(min=4, max=15)])
     password = PasswordField('', validators=[InputRequired(), Length(min=8, max=80)])
@@ -81,12 +100,14 @@ class RegisterForm(FlaskForm):
 def index():
     return render_template('index.html')
 
+# manual signup
 @app.route('/signup', methods = ['GET', 'POST'])
 @app.route('/signup.html')
 def signup():
     form = RegisterForm()
 
     if form.validate_on_submit():
+        # sha256 encrypted hashed pass using werkzeug security
         hashed_pass = generate_password_hash(form.password.data, method = 'sha256')
         new_user = User(username = form.username.data, email = form.email.data, password = hashed_pass)
         database.session.add(new_user)
@@ -96,6 +117,7 @@ def signup():
     return render_template("signup.html", form = form)
 
 
+# login route for login purpose
 @app.route('/login', methods = ['GET', 'POST'])
 @app.route('/loginform.html')
 def login():
@@ -111,31 +133,57 @@ def login():
         return '<h1>Invalid User or pass</h1>'
 
     return render_template('loginform.html', form = form)
-    
+
 
 @app.route('/google')
 def google_login():
-    if not google.authorized:
+    if google.authorized == False:
         return redirect(url_for('google.login'))
-    acc_info = google.get("/oauth2/v1/userinfo")
+    else:
+        return redirect(url_for('search'))
+
+
+@oauth_authorized.connect_via(google_blueprint)
+def google_logged_in(blueprint, token):
+    acc_info = blueprint.session.get("/oauth2/v1/userinfo")
     if acc_info.ok:
         acc_json = acc_info.json()
+        username = acc_json['name']
+        # somehow json response e email key nai :()
+        # email = acc_json['email']
+        query = User.query.filter_by(username=username)
 
-        return '<h1>Your google is {}</h1>'.format(acc_json['name'])
-    return "<h1> SHIIT !</h1>"
-
+        try:
+            user = query.one()
+        except NoResultFound:
+            user = User(username=username, password="blank_not_needed")
+            database.session.add(user)
+            database.session.commit()
+        login_user(user)
 
 
 @app.route('/facebook')
 def face_login():
     if not facebook.authorized:
         return redirect(url_for('facebook.login'))
-    acc_info = facebook.get("/me")
+
+    return redirect(url_for('search'))
+
+@oauth_authorized.connect_via(facebook_blueprint)
+def facebook_logged_in(blueprint, token):
+    acc_info = blueprint.session.get("/me")
     if acc_info.ok:
         acc_json = acc_info.json()
-        return '<h1>Your facebook id is {}</h1>'.format(acc_json['name'])
+        username = acc_json['name']
+        query = User.query.filter_by(username=username)
 
-    return "<h1> SHIIT !</h1>"
+        try:
+            user = query.one()
+        except NoResultFound:
+            user = User(username=username, password="blank_not_needed")
+            database.session.add(user)
+            database.session.commit()
+        login_user(user)
 
 
 @app.route('/logout')
@@ -143,7 +191,6 @@ def face_login():
 def logout():
     logout_user()
     return redirect(url_for('index'))
-
 
 
 
@@ -155,9 +202,3 @@ def search():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-
-# for testing purpose I blocked citysearch.html so that it is only
-# viewable when logged in. will change that to blocking marketplace/dashboard
-
-# to do: block admin acssess
