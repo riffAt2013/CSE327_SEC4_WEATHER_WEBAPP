@@ -1220,3 +1220,17 @@ img.portfolio{
 
 
 /*--- Login Page End--*/
+
+
+
+
+/*--- Market Place--*/
+
+.marketplace{
+    position: absolute;
+    border: none;
+    left: 1vw;
+    top: 10vh;
+    height: 90vh;
+    width: 99vw;
+}
