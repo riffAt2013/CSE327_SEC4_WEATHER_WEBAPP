@@ -15,8 +15,12 @@ let dressDescriptionTop = document.querySelector(".description2");
 let dressDescriptionBottom = document.querySelector(".description3");
 let dressDescriptionFootwear = document.querySelector(".description4");
 
-let ecstasy = document.querySelector(".marketplace");
+let website = document.querySelector(".marketplace2");
 
+var accessories;
+var topwear;
+var bottomwear;
+var shoe;
 
 var descriptionsMale = [
 "Its a less than 15 degree outside. Don't forget your jacket.",
@@ -223,6 +227,10 @@ if(icon.match(/partly-cloudy-night/gi)){
 }
 
 function giveSuggestions(acc,top,bottom,foot){
+    accessories = acc;
+    topwear = top;
+    bottomwear = bottom;
+    shoe = foot;
     dressNameAccessories.textContent = acc;
     dressNameAccessories2.textContent = acc;
     dressImgAccessories.src ="../static/photos/clothes/"+acc+".png";
@@ -263,7 +271,20 @@ function giveSuggestions(acc,top,bottom,foot){
 }
 
 
-document.getElementById('buynow').addEventListener('click', () =>{
+document.getElementById('buynowacc').addEventListener('click', () =>{
+    website.src ="https://ecstasybd.com/";
+    document.getElementById('forcast').style.display = 'none';
+    document.getElementById('web').style.display = 'flex';
+})
+document.getElementById('buynowtop').addEventListener('click', () =>{
+    document.getElementById('forcast').style.display = 'none';
+    document.getElementById('web').style.display = 'flex';
+})
+document.getElementById('buynowbottom').addEventListener('click', () =>{
+    document.getElementById('forcast').style.display = 'none';
+    document.getElementById('web').style.display = 'flex';
+})
+document.getElementById('buynowshoe').addEventListener('click', () =>{
     document.getElementById('forcast').style.display = 'none';
     document.getElementById('web').style.display = 'flex';
 })
@@ -271,6 +292,6 @@ document.getElementById('buynow').addEventListener('click', () =>{
 
 function setSuggestion(suggestion){
     if(suggestion.includes('shirt')){
-        ecstasy.src ="https://www.lerevecraze.com/";
+        website.src ="https://www.lerevecraze.com/";
     }
 }
