@@ -171,7 +171,7 @@ Faculty : ABH3**
 
 
 **Non-Functional Requirement**:
--	Privacy (Doctor-patient confidentiality)
+-	Privacy
 -	Authentication system
 -	Ease of use (Simple and initiative UI design and well documented FAQ)
 -	Backup storage in case of system failures
@@ -251,4 +251,3 @@ then navigate to `https://localhost:5000` to check the website
 - [x] Cross Platform Implementation (UI Done)
 
 - [ ] Internal Updates
-
