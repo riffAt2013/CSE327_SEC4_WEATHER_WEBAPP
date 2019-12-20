@@ -126,3 +126,6 @@ document.getElementById('lereve2').addEventListener('click', () =>{
     websitechoice.style.display = 'none';
     document.getElementById('mp').style.display = 'flex';
 })
+
+
+
