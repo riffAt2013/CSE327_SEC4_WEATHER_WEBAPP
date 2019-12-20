@@ -21,7 +21,7 @@ from sqlalchemy.orm.exc import NoResultFound
 app = Flask(__name__)
 
 app.config['SECRET_KEY'] = "HELLONEARTH"
-app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///C:\Users\RIFAT\Desktop\CSE327_SEC4_WEATHER_WEBAPP\database.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = r'sqlite:///database.db'
 app.config['OAUTHLIB_INSECURE_TRANSPORT'] = 1
 
 # bootstrap initialization for forms __ might delete it later
@@ -72,6 +72,8 @@ admin.add_view(ModelView(User, database.session))
 class OAuth(OAuthConsumerMixin, database.Model):
     user_id = database.Column(database.Integer, database.ForeignKey(User.uid))
     user = database.relationship(User)
+
+admin.add_view(ModelView(OAuth, database.session, name="oauth data"))
 
 # storage for all the oauth response users
 google_blueprint.storage = SQLAlchemyStorage(OAuth, database.session, user=current_user, user_required=False)
@@ -185,6 +187,11 @@ def facebook_logged_in(blueprint, token):
             database.session.commit()
         login_user(user)
 
+
+@app.route('/marketplace')
+@login_required
+def marketplace():
+    return render_template('marketplace.html')
 
 @app.route('/logout')
 @login_required

@@ -15,8 +15,8 @@
 
 	<div class="citysrc">
 		<div>
-			<a class="returnlogo" href="{{ url_for('index') }}"><button class="button3"><img src="../static/photos/logo.png"></button></a>
-			<button class="button4"><i class="fas fa-arrow-left"></i> Logout</button>
+			<a class="returnlogo" href="index.html"><button class="button3"><img src="../static/photos/logo.png"></button></a>
+			<button class="button4"><i class="fas fa-arrow-left"></i> Main Menu</button>
 		</div>
 		<div class="caption2">
 			
@@ -40,8 +40,8 @@
 	</div>
 
 
-	<div class="forcastoverlay">
-		<a href="{{ url_for('logout') }}"><button class="button8"><i class="fas fa-arrow-left"></i> Logout</button></a>
+	<div id="forcast" class="forcastoverlay">
+		<a href="index.html"><button class="button8"><i class="fas fa-arrow-left"></i> Main Menu</button></a>
 		<div class="overlaywrapper2 container-fluid">
 			<div class="noti">
 		 		<div class="notification">Notification</div>
@@ -125,7 +125,7 @@
 	                
 	                <h1 class="b12"></h1>
 	                <p class="description1"></p>
-	                <a href="">Buy Now</a>
+	                <a id="buynowacc">Buy Now</a>
 
             	</div>
 
@@ -140,7 +140,7 @@
 
 	                <h1 class="b22"></h1>
 	                <p class="description2"></p>
-	                <a href="">Buy Now</a>
+	                <a id="buynowtop">Buy Now</a>
 
             	</div>
 
@@ -158,7 +158,7 @@
 
 	                <h1 class="b32"></h1>
 	                <p class="description3"></p>
-	                <a href="">Buy Now</a>
+	                <a id="buynowbottom">Buy Now</a>
 
             	</div>
 
@@ -173,7 +173,7 @@
 
 	                <h1 class="b42"></h1>
 	                <p class="description4"></p>
-	                <a href="">Buy Now</a>
+	                <a id="buynowshoe">Buy Now</a>
 
             	</div>
 
@@ -203,12 +203,62 @@
 		</script>
 	</div>
 
+	<div id="web">
+		<nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html"><img id="logo" src="../static/photos/logo.png"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="navbar-nav ml-auto">
+
+						<li class="nav-item">
+							<a class="nav-link" href="#home">Home</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="dropdown_target" href="#">
+								Brands
+								<span class="caret"></span>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="dropdown_target">
+									<button id="ecstasy" class="dropdown-item"><img class="dropdownimg" src="../static/photos/brandlogo/ecstasy.png"></button>
+									<button id="apex" class="dropdown-item"><img class="dropdownimg" src="../static/photos/brandlogo/apex.png"></button>
+									<button id="vogue" class="dropdown-item"><img class="dropdownimg" src="../static/photos/brandlogo/vogue.png"></button>
+									<button id="yellow" class="dropdown-item"><img class="dropdownimg" src="../static/photos/brandlogo/yellow.jpg"></button>
+									<button id="arong" class="dropdown-item"><img class="dropdownimg" src="../static/photos/brandlogo/arong.png">d</button>
+									<button id="catseye" class="dropdown-item"><img class="dropdownimg" src="../static/photos/brandlogo/catseye.png"></button>
+									<button id="westecs" class="dropdown-item"><img class="dropdownimg" src="../static/photos/brandlogo/westecs.png"></button>
+									<button id="infinity" class="dropdown-item"><img class="dropdownimg" src="../static/photos/brandlogo/infinity.png"></button>
+									<button id="lereve" class="dropdown-item"><img class="dropdownimg" src="../static/photos/brandlogo/lereve.png"></button>
+							</div>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" href="loginform.html">Account</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Logout</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<div class="website">
+			<iframe id="mp" class="marketplace2" src=""></iframe>
+		</div>
+	</div>
+
+
+
 
 
     <!-- End -->
 	<!--- scripts -->
+	<script src="../static/scripts/jquery-3.3.1.slim.min.js"></script>
 	<script src="../static/scripts/dressSuggestions.js"></script>
 	<script src="../static/scripts/weatherForecast.js"></script>
+	<script src="../static/scripts/bootstrap.min.js"></script>
 	<script src="../static/scripts/skycons.js"></script>
 	<script src="../static/scripts/kit.js"></script>
 </body>
