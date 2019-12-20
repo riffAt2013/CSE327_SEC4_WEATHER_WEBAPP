@@ -272,26 +272,35 @@ function giveSuggestions(acc,top,bottom,foot){
 
 
 document.getElementById('buynowacc').addEventListener('click', () =>{
-    website.src ="https://ecstasybd.com/";
     document.getElementById('forcast').style.display = 'none';
     document.getElementById('web').style.display = 'flex';
+    if(topwear.includes('SHIRT')){
+        website.src ="https://ecstasybd.com/sweatshirt";
+    }
 })
 document.getElementById('buynowtop').addEventListener('click', () =>{
     document.getElementById('forcast').style.display = 'none';
     document.getElementById('web').style.display = 'flex';
+    if(topwear.includes('SHIRT')){
+        website.src ="https://ecstasybd.com/sweatshirt";
+    }
 })
 document.getElementById('buynowbottom').addEventListener('click', () =>{
     document.getElementById('forcast').style.display = 'none';
     document.getElementById('web').style.display = 'flex';
+    if(bottomwear.includes('TROUSER')){
+        website.src ="https://ecstasybd.com/men-active-wear-joggers-trousers";
+    }
 })
 document.getElementById('buynowshoe').addEventListener('click', () =>{
     document.getElementById('forcast').style.display = 'none';
     document.getElementById('web').style.display = 'flex';
+    if(shoe.includes('SNEAKER')){
+        website.src ="https://www.apex4u.com/activites-specialised-shoesports-10";
+    }
 })
 
 
 function setSuggestion(suggestion){
-    if(suggestion.includes('shirt')){
-        website.src ="https://www.lerevecraze.com/";
-    }
+    
 }
