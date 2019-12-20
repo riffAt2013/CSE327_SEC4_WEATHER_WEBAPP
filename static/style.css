@@ -972,6 +972,7 @@ img.portfolio{
     transition: .5s;
 }
 .details a:hover{
+    cursor: pointer;
     transform: scale(1.02);
     background:#056967;
     box-shadow: 5px 10px 10px black;
@@ -1022,7 +1023,9 @@ img.portfolio{
     width: 5.4vw;
 }
 /*--- Forecast Page End--*/
-
+#web{
+    display: none;
+}
 
 
 
