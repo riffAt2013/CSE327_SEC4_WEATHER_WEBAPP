@@ -1426,6 +1426,15 @@ img.portfolio{
     height: 90vh;
     width: 99vw;
 }
+.marketplace2{
+
+    position: absolute;
+    border: none;
+    left: 1vw;
+    top: 10vh;
+    height: 90vh;
+    width: 99vw;
+}
 .websitebutton{
     background: #ffffff;
     position: relative;
