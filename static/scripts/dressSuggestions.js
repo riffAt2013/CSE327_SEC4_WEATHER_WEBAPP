@@ -91,7 +91,7 @@ if(icon.match(/clear-night/gi)){
         giveSuggestions("CAP","JACKET","JEANS","SNEAKER"); 
     }
     if(temp > 15 && temp <= 20 ){
-
+        giveSuggestions("CAP","JACKET","JEANS","SNEAKER"); 
     }
     if(temp > 20 && temp <= 25 ){
         giveSuggestions("BLANK","SHIRT","TROUSER","SNEAKER");
@@ -105,13 +105,13 @@ if(icon.match(/clear-night/gi)){
 }
 if(icon.match(/rain/gi)){
     if(temp <= 10){
-
+        giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
     }
     if(temp > 10 && temp <= 15 ){
-
+        giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
     }
     if(temp > 15 && temp <= 20 ){
-
+        giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
     }
     if(temp > 20 && temp <= 25 ){
         giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
@@ -157,7 +157,7 @@ if(icon.match(/fog/gi)){
 
     }
     if(temp > 25 && temp <= 30 ){
-        giveSuggestions("SUNGLASS","SHIRT","TROUSER","SNEAKER");
+        giveSuggestions("BLANK","SHIRT","TROUSER","SNEAKER");
     }
     if(temp > 30){
 
@@ -194,7 +194,7 @@ if(icon.match(/partly-cloudy-day/gi)){
 
     }
     if(temp > 20 && temp <= 25 ){
-
+        giveSuggestions("CAP","HOODY","JEANS","SNEAKER"); 
     }
     if(temp > 25 && temp <= 30 ){
 
@@ -278,20 +278,32 @@ document.getElementById('buynowacc').addEventListener('click', () =>{
         website.src ="https://ecstasybd.com/sweatshirt";
     }
 })
+
+
 document.getElementById('buynowtop').addEventListener('click', () =>{
     document.getElementById('forcast').style.display = 'none';
     document.getElementById('web').style.display = 'flex';
     if(topwear.includes('SHIRT')){
         website.src ="https://ecstasybd.com/sweatshirt";
     }
+    if(topwear.includes('HOODY')){
+        website.src ="https://ecstasybd.com/men-winter-collections-hoodies";
+    }
 })
+
+
 document.getElementById('buynowbottom').addEventListener('click', () =>{
     document.getElementById('forcast').style.display = 'none';
     document.getElementById('web').style.display = 'flex';
     if(bottomwear.includes('TROUSER')){
         website.src ="https://ecstasybd.com/men-active-wear-joggers-trousers";
     }
+    if(bottomwear.includes('JEANS')){
+        website.src ="https://www.yellowclothing.net/13-jeans";
+    }
 })
+
+
 document.getElementById('buynowshoe').addEventListener('click', () =>{
     document.getElementById('forcast').style.display = 'none';
     document.getElementById('web').style.display = 'flex';
@@ -299,6 +311,31 @@ document.getElementById('buynowshoe').addEventListener('click', () =>{
         website.src ="https://www.apex4u.com/activites-specialised-shoesports-10";
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 function setSuggestion(suggestion){
