@@ -10,8 +10,8 @@ document.getElementById('ecstasy').addEventListener('click', () =>{
     document.getElementById('mp').style.display = 'flex';
 })
 
-document.getElementById('easy').addEventListener('click', () =>{
-    ecstasy.src ="https://www.easyfashion.com.bd/";
+document.getElementById('apex').addEventListener('click', () =>{
+    ecstasy.src ="https://www.apex4u.com/";
     websitechoice.style.display = 'none';
     document.getElementById('mp').style.display = 'flex';
 })
@@ -79,8 +79,8 @@ document.getElementById('ecstasy2').addEventListener('click', () =>{
     document.getElementById('mp').style.display = 'flex';
 })
 
-document.getElementById('easy2').addEventListener('click', () =>{
-    ecstasy.src ="https://www.easyfashion.com.bd/";
+document.getElementById('apex2').addEventListener('click', () =>{
+    ecstasy.src ="https://www.apex4u.com/";
     websitechoice.style.display = 'none';
     document.getElementById('mp').style.display = 'flex';
 })
