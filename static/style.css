@@ -1435,6 +1435,7 @@ img.portfolio{
     height: 90vh;
     width: 99vw;
 }
+
 .websitebutton{
     background: #ffffff;
     position: relative;
@@ -1467,5 +1468,6 @@ img.portfolio{
     width: 6rem;
 }
 .dropdown-item:hover{
+    cursor: pointer;
     background:#969287;
 }
