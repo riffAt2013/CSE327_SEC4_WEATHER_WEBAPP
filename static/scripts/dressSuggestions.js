@@ -15,6 +15,29 @@ let dressDescriptionTop = document.querySelector(".description2");
 let dressDescriptionBottom = document.querySelector(".description3");
 let dressDescriptionFootwear = document.querySelector(".description4");
 
+
+
+let dressNameAccessories1 = document.querySelector(".b11");
+let dressImgAccessories1 = document.querySelector(".b11img");
+let dressNameTop1 = document.querySelector(".b22");
+let dressImgTop1 = document.querySelector(".b22img");
+let dressNameBottom1 = document.querySelector(".b33");
+let dressImgBottom1 = document.querySelector(".b33img");
+let dressNameFootwear1 = document.querySelector(".b44");
+let dressImgFootwear1 = document.querySelector(".b44img");
+let dressNameAccessories22 = document.querySelector(".b122");
+let dressNameTop22 = document.querySelector(".b222");
+let dressNameBottom22 = document.querySelector(".b322");
+let dressNameFootwear22 = document.querySelector(".b422");
+let dressDescriptionAccessories2 = document.querySelector(".description11");
+let dressDescriptionTop2 = document.querySelector(".description22");
+let dressDescriptionBottom2 = document.querySelector(".description33");
+let dressDescriptionFootwear2 = document.querySelector(".description44");
+
+
+
+
+
 let website = document.querySelector(".marketplace2");
 
 var accessories;
@@ -68,19 +91,24 @@ if(icon.match(/clear-day/gi)){
 
     }
     if(temp > 10 && temp <= 15 ){
-        giveSuggestions("BLANK","HOODY","JEANS","SNEAKER"); 
+        giveSuggestions("BLANK","HOODY","JEANS","SNEAKER");
+        giveSuggestionsF("BLANK","HOODY","JEANS","SNEAKER");  
     }
     if(temp > 15 && temp <= 20 ){
-        giveSuggestions("CAP","HOODY","JEANS","SNEAKER"); 
+        giveSuggestions("CAP","HOODY","JEANS","SNEAKER");
+        giveSuggestionsF("CAP","HOODY","JEANS","SNEAKER"); 
     }
     if(temp > 20 && temp <= 25 ){
         giveSuggestions("SUNGLASS","SHIRT","TROUSER","SNEAKER");
+        giveSuggestionsF("SUNGLASS","SHIRT","TROUSER","SNEAKER");
     }
     if(temp > 25 && temp <= 30 ){
         giveSuggestions("SUNGLASS","T-SHIRT","TROUSER","SNEAKER");
+        giveSuggestionsF("SUNGLASS","T-SHIRT","TROUSER","SNEAKER");
     }
     if(temp > 30){
         giveSuggestions("SUNGLASS","T-SHIRT","TROUSER","SLIPPER");
+        giveSuggestionsF("SUNGLASS","T-SHIRT","TROUSER","SLIPPER");
     }
 }
 if(icon.match(/clear-night/gi)){
@@ -88,39 +116,50 @@ if(icon.match(/clear-night/gi)){
 
     }
     if(temp > 10 && temp <= 15 ){
-        giveSuggestions("CAP","JACKET","JEANS","SNEAKER"); 
+        giveSuggestions("CAP","JACKET","JEANS","SNEAKER");
+        giveSuggestionsF("CAP","JACKET","JEANS","SNEAKER"); 
     }
     if(temp > 15 && temp <= 20 ){
-        giveSuggestions("CAP","JACKET","JEANS","SNEAKER"); 
+        giveSuggestions("CAP","JACKET","JEANS","SNEAKER");
+        giveSuggestionsF("CAP","JACKET","JEANS","SNEAKER"); 
     }
     if(temp > 20 && temp <= 25 ){
         giveSuggestions("BLANK","SHIRT","TROUSER","SNEAKER");
+        giveSuggestionsF("BLANK","SHIRT","TROUSER","SLIPPER");
     }
     if(temp > 25 && temp <= 30 ){
         giveSuggestions("BLANK","T-SHIRT","TROUSER","SNEAKER");
+        giveSuggestionsF("BLANK","T-SHIRT","TROUSER","SLIPPER");
     }
     if(temp > 30){
         giveSuggestions("BLANK","T-SHIRT","TROUSER","SLIPPER");
+        giveSuggestionsF("BLANK","T-SHIRT","TROUSER","SLIPPER");
     }
 }
 if(icon.match(/rain/gi)){
     if(temp <= 10){
         giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
+        giveSuggestionsF("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
     }
     if(temp > 10 && temp <= 15 ){
         giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
+        giveSuggestionsF("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
     }
     if(temp > 15 && temp <= 20 ){
         giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
+        giveSuggestionsF("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
     }
     if(temp > 20 && temp <= 25 ){
         giveSuggestions("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
+        giveSuggestionsF("RAINCOAT","BUTTON SHIRT","JEANS","BOOT");
     }
     if(temp > 25 && temp <= 30 ){
         giveSuggestions("RAINCOAT","T-SHIRT","TROUSER","BOOT");
+        giveSuggestionsF("RAINCOAT","T-SHIRT","TROUSER","BOOT");
     }
     if(temp > 30){
         giveSuggestions("RAINCOAT","T-SHIRT","TROUSER","BOOT");
+        giveSuggestionsF("RAINCOAT","T-SHIRT","TROUSER","BOOT");
     }
 }
 if(icon.match(/wind/gi)){
@@ -158,6 +197,7 @@ if(icon.match(/fog/gi)){
     }
     if(temp > 25 && temp <= 30 ){
         giveSuggestions("BLANK","SHIRT","TROUSER","SNEAKER");
+        giveSuggestionsF("BLANK","SHIRT","TROUSER","SNEAKER");
     }
     if(temp > 30){
 
@@ -168,19 +208,24 @@ if(icon.match(/cloudy/gi)){
 
     }
     if(temp > 10 && temp <= 15 ){
-
+        giveSuggestions("CAP","JACKET","JEANS","SNEAKER");
+        giveSuggestionsF("CAP","JACKET","JEANS","SNEAKER");
     }
     if(temp > 15 && temp <= 20 ){
-
+        giveSuggestions("CAP","HOODY","JEANS","SNEAKER");
+        giveSuggestionsF("CAP","HOODY","JEANS","SNEAKER");  
     }
     if(temp > 20 && temp <= 25 ){
-        giveSuggestions("UMBRELLA","SHIRT","TROUSER","SNEAKER");
+        giveSuggestions("Blank","SHIRT","TROUSER","SNEAKER");
+        giveSuggestionsF("Blank","SHIRT","TROUSER","SNEAKER");
     }
     if(temp > 25 && temp <= 30 ){
         giveSuggestions("UMBRELLA","T-SHIRT","TROUSER","SNEAKER");
+        giveSuggestionsF("UMBRELLA","T-SHIRT","TROUSER","SNEAKER");
     }
     if(temp > 30){
         giveSuggestions("UMBRELLA","T-SHIRT","TROUSER","SLIPPER");
+        giveSuggestionsF("UMBRELLA","T-SHIRT","TROUSER","SLIPPER");
     }
 }
 if(icon.match(/partly-cloudy-day/gi)){
@@ -194,7 +239,8 @@ if(icon.match(/partly-cloudy-day/gi)){
 
     }
     if(temp > 20 && temp <= 25 ){
-        giveSuggestions("CAP","HOODY","JEANS","SNEAKER"); 
+        giveSuggestions("CAP","HOODY","JEANS","SNEAKER");
+        giveSuggestionsF("CAP","HOODY","JEANS","SNEAKER"); 
     }
     if(temp > 25 && temp <= 30 ){
 
@@ -211,7 +257,8 @@ if(icon.match(/partly-cloudy-night/gi)){
 
     }
     if(temp > 15 && temp <= 20 ){
-        giveSuggestions("CAP","HOODY","JEANS","SNEAKER"); 
+        giveSuggestions("CAP","HOODY","JEANS","SNEAKER");
+        giveSuggestionsF("CAP","HOODY","JEANS","SNEAKER"); 
     }
     if(temp > 20 && temp <= 25 ){
 
@@ -271,6 +318,58 @@ function giveSuggestions(acc,top,bottom,foot){
 }
 
 
+
+function giveSuggestionsF(acc,top,bottom,foot){
+    accessories = acc;
+    topwear = top;
+    bottomwear = bottom;
+    shoe = foot;
+    dressNameAccessories1.textContent = acc;
+    dressNameAccessories22.textContent = acc;
+    dressImgAccessories1.src ="../static/photos/clothes/female/"+acc+".png";
+    for(var i = 0 ;i<descriptionsFemale.length;i++){
+        acc = acc.toLowerCase();                    
+        if(descriptionsFemale[i].includes(acc)){
+            dressDescriptionAccessories2.textContent = descriptionsFemale[i];
+        }
+    }
+    dressNameTop1.textContent = top;
+    dressNameTop22.textContent = top;
+    dressImgTop1.src ="../static/photos/clothes/female/"+top+".png";
+    setSuggestion(top);
+    for(var i = 0 ;i<descriptionsFemale.length;i++){
+        top = top.toLowerCase();                    
+        if(descriptionsFemale[i].includes(top)){
+            dressDescriptionTop.textContent = descriptionsFemale[i];
+        }
+    }
+    dressNameBottom1.textContent = bottom;
+    dressNameBottom22.textContent = bottom;
+    dressImgBottom1.src ="../static/photos/clothes/female/"+bottom+".png";
+    for(var i = 0 ;i<descriptionsFemale.length;i++){
+        bottom = bottom.toLowerCase();                    
+        if(descriptionsFemale[i].includes(bottom)){
+            dressDescriptionBottom.textContent = descriptionsFemale[i];
+        }
+    }
+    dressNameFootwear1.textContent = foot;
+    dressNameFootwear22.textContent = foot;
+    dressImgFootwear1.src ="../static/photos/clothes/female/"+foot+".png";
+    for(var i = 0 ;i<descriptionsFemale.length;i++){
+        foot = foot.toLowerCase();                    
+        if(descriptionsFemale[i].includes(foot)){
+            dressDescriptionFootwear.textContent = descriptionsFemale[i];
+        }
+    }
+}
+
+
+
+
+
+
+
+
 document.getElementById('buynowacc').addEventListener('click', () =>{
     document.getElementById('forcast').style.display = 'none';
     document.getElementById('web').style.display = 'flex';
@@ -288,6 +387,9 @@ document.getElementById('buynowtop').addEventListener('click', () =>{
     }
     if(topwear.includes('HOODY')){
         website.src ="https://ecstasybd.com/men-winter-collections-hoodies";
+    }
+    if(topwear.includes('JACKET')){
+        website.src ="https://ecstasybd.com/jackets";
     }
 })
 
