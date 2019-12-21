@@ -196,7 +196,7 @@ We prioritized the requirements based on user interviews as well as our core obj
 -	User profile Dashboard 
 
 ## Product Backlog (TO DOs)
-![backlog image here](backlog.png)
+![backlog image here](https://raw.githubusercontent.com/riffAt2013/CSE327_SEC4_WEATHER_WEBAPP/master/backlog.PNG)
 
 ## Installation for Development
 
