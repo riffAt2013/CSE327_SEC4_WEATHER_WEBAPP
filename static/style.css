@@ -1471,3 +1471,6 @@ img.portfolio{
     cursor: pointer;
     background:#969287;
 }
+#suggestionDisplayF{
+    display: none;
+}
