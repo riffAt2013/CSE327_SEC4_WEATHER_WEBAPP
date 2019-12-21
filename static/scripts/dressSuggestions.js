@@ -75,10 +75,9 @@ var descriptionsFemale = [
 "Its raining cats & dogs. A raincoat is a must.",
 "Temperature can drop. A button shirt will keep you warm.",
 "In this rainy day there is no alternate of a pair of boot.",
-"Its cold out there.A good jeans will keep you warm.",
+"Its cold out there. A good jeans will keep you warm.",
 "A well made hoody will keep your body and ear warm.",
 "A thermal cap will keep your ear warm."
-
 ];
 
 
@@ -340,7 +339,7 @@ function giveSuggestionsF(acc,top,bottom,foot){
     for(var i = 0 ;i<descriptionsFemale.length;i++){
         top = top.toLowerCase();                    
         if(descriptionsFemale[i].includes(top)){
-            dressDescriptionTop.textContent = descriptionsFemale[i];
+            dressDescriptionTop2.textContent = descriptionsFemale[i];
         }
     }
     dressNameBottom1.textContent = bottom;
@@ -349,7 +348,7 @@ function giveSuggestionsF(acc,top,bottom,foot){
     for(var i = 0 ;i<descriptionsFemale.length;i++){
         bottom = bottom.toLowerCase();                    
         if(descriptionsFemale[i].includes(bottom)){
-            dressDescriptionBottom.textContent = descriptionsFemale[i];
+            dressDescriptionBottom2.textContent = descriptionsFemale[i];
         }
     }
     dressNameFootwear1.textContent = foot;
@@ -358,7 +357,7 @@ function giveSuggestionsF(acc,top,bottom,foot){
     for(var i = 0 ;i<descriptionsFemale.length;i++){
         foot = foot.toLowerCase();                    
         if(descriptionsFemale[i].includes(foot)){
-            dressDescriptionFootwear.textContent = descriptionsFemale[i];
+            dressDescriptionFootwear2.textContent = descriptionsFemale[i];
         }
     }
 }
@@ -420,6 +419,49 @@ document.getElementById('buynowshoe').addEventListener('click', () =>{
 
 
 
+document.getElementById('buynowacc2').addEventListener('click', () =>{
+    document.getElementById('forcast').style.display = 'none';
+    document.getElementById('web').style.display = 'flex';
+    if(topwear.includes('SHIRT')){
+        website.src ="https://ecstasybd.com/sweatshirt";
+    }
+})
+
+
+document.getElementById('buynowtop2').addEventListener('click', () =>{
+    document.getElementById('forcast').style.display = 'none';
+    document.getElementById('web').style.display = 'flex';
+    if(topwear.includes('SHIRT')){
+        website.src ="https://ecstasybd.com/sweatshirt";
+    }
+    if(topwear.includes('HOODY')){
+        website.src ="https://ecstasybd.com/men-winter-collections-hoodies";
+    }
+    if(topwear.includes('JACKET')){
+        website.src ="https://ecstasybd.com/jackets";
+    }
+})
+
+
+document.getElementById('buynowbottom2').addEventListener('click', () =>{
+    document.getElementById('forcast').style.display = 'none';
+    document.getElementById('web').style.display = 'flex';
+    if(bottomwear.includes('TROUSER')){
+        website.src ="https://ecstasybd.com/men-active-wear-joggers-trousers";
+    }
+    if(bottomwear.includes('JEANS')){
+        website.src ="https://www.yellowclothing.net/13-jeans";
+    }
+})
+
+
+document.getElementById('buynowshoe2').addEventListener('click', () =>{
+    document.getElementById('forcast').style.display = 'none';
+    document.getElementById('web').style.display = 'flex';
+    if(shoe.includes('SNEAKER')){
+        website.src ="https://www.apex4u.com/activites-specialised-shoesports-10";
+    }
+})
 
 
 
